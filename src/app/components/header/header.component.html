@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">AS</div>
+
+    <a (click)="scrollTo('about')"    class="nav-link">{{ i18n.get('nav.about') }}</a>
+    <a (click)="scrollTo('skills')"   class="nav-link">{{ i18n.get('nav.skills') }}</a>
+    <a (click)="scrollTo('projects')" class="nav-link">{{ i18n.get('nav.projects') }}</a>
+    <a (click)="scrollTo('contact')"  class="nav-link">{{ i18n.get('nav.contact') }}</a>
+
+    <div class="lang-toggle">
+      <input type="checkbox" id="lang" hidden (change)="toggleLanguage($event)" />
+      <label for="lang" class="lang-en">EN</label>
+      <label class="switch" for="lang"><span class="slider"></span></label>
+      <label for="lang" class="lang-de">DE</label>
+    </div>
+
+    <button class="burger" (click)="isMenuOpen = !isMenuOpen">☰</button>
+  </div>
+
+  <nav class="mobile-menu" [ngClass]="{ open: isMenuOpen }">
+    <div class="logo">AS</div>
+    <button class="close-btn" (click)="isMenuOpen = false">✕</button>
+
+    <a (click)="scrollTo('about')"    class="nav-link">{{ i18n.get('nav.about') }}</a>
+    <a (click)="scrollTo('skills')"   class="nav-link">{{ i18n.get('nav.skills') }}</a>
+    <a (click)="scrollTo('projects')" class="nav-link">{{ i18n.get('nav.projects') }}</a>
+    <a (click)="scrollTo('contact')"  class="nav-link">{{ i18n.get('nav.contact') }}</a>
+
+    <div class="lang-toggle">
+      <input type="checkbox" id="lang-m" hidden (change)="toggleLanguage($event)" />
+      <label for="lang-m" class="lang-en">EN</label>
+      <label class="switch" for="lang-m"><span class="slider"></span></label>
+      <label for="lang-m" class="lang-de">DE</label>
+    </div>
+  </nav>
+</header>

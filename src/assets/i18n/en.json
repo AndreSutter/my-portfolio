@@ -1,0 +1,105 @@
+{
+  "nav.about": "About me",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+
+  "about.location": "Based in Zürich",
+  "about.relocation": "Open to relocate",
+  "about.remote": "Open to work remote",
+  "about.subheading": "WHO’S ANDRÉ?",
+  "about.headline": "About me",
+
+  "about.p1": "Hey there, I’m André. I’m a passionate frontend developer with a strong sense for clean code, intuitive design, and user-centered experiences. What excites me about coding is the unique balance between logic and creativity – solving real problems with elegant solutions that not only work but feel right.",
+  "about.p2": "Every new challenge is a chance to sharpen my skills, question old habits, and discover smarter ways to build. I truly enjoy the learning process – whether it’s debugging a tricky issue or exploring a new tool or approach.",
+  "about.p3": "I believe that great software is built through curiosity, consistency, and collaboration. Let’s bring our ideas together and create something remarkable.",
+
+  "about.talk": "Let’s talk",
+
+  "hero.hello": "Hello world",
+  "hero.name": "I’M ANDRÉ SUTTER",
+  "hero.title1": "Frontend",
+  "hero.title2": "DEVELOPER",
+  "hero.cta": "Get in Touch",
+  "hero.caption": "André :)",
+
+  "skills.subheading": "MY STACK",
+  "skills.headline": "Skill set",
+  "skills.description": "I build responsive, user-friendly interfaces with a strong focus on clean code and intuitive design. I enjoy solving real problems, working in agile teams, and continuously improving through hands-on experience and learning.",
+
+  "project.back": "Go Back",
+  "project.description": "Description",
+  "project.details": "Implementation Details",
+  "project.duration": "Duration",
+  "project.next": "Next Project",
+  "project.github": "GitHub",
+  "project.live": "Live Test",
+  
+  "project.join.description": "Join is a task management application inspired by the Kanban method. It allows users to create, categorize, and manage tasks using a drag-and-drop interface. With an intuitive layout, it simplifies task tracking and enhances team collaboration.",
+  "project.join.implementation": "This project was built using Angular and TypeScript, with Firebase providing authentication and database services. I implemented dynamic task rendering, drag-and-drop logic, user assignment, and responsive layout design. The project strengthened my skills in component-based architecture, state management, and working with real-time data in a collaborative environment.",
+
+  "projects.subheading": "MY CRAFT",
+  "projects.headline": "Projects",
+  "projects.intro": "Explore a selection of my projects built with modern frontend tools. Each one reflects my focus on clean design, responsiveness, and efficient code.",
+  "projects.detailsBtn": "Project details",
+  "projects.join.desc": "Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, assign users and categorize tasks.",
+  "projects.sharkie.desc": "A classic side-scrolling jump’n’run game built with JavaScript and HTML5 Canvas. Use keyboard controls to collect coins, defeat enemies, and dive through underwater levels.",
+  "projects.pokedex.desc": "Build your own digital Pokédex. Project uses API data to fetch and display detailed Pokémon stats, abilities, and visuals in an engaging and interactive way.",
+
+  "testimonials.titlePart1": "Colleagues'",
+  "testimonials.titlePart2": "Thoughts",
+
+  "testimonials.card1.text": "I worked with André on our Join project. He was a helpful and genuinely kind teammate. You could always ask him for support, and his input was highly valued in the group. Working with André was not only enjoyable but also a real asset to the team.",
+  "testimonials.card1.name": "Erich Gettinger",
+  "testimonials.card1.role": "Frontend Developer",
+
+  "testimonials.card2.text": "I had the opportunity to work with André on the JOIN project and got to know him as a highly reliable and supportive colleague. Even under pressure, he remained calm and kept the bigger picture in mind. His structured approach and team spirit made a great impact on our collaboration.",
+  "testimonials.card2.name": "Philipp Tesch",
+  "testimonials.card2.role": "Frontend Developer",
+
+  "contact.label": "Contact Me",
+  "contact.title": "Ready to work<br />together?",
+  "contact.description1": "I'm currently open to exciting opportunities as a frontend developer. I enjoy building modern web applications and collaborating in teams where I can contribute my skills and grow professionally.",
+  "contact.description2": "If you're looking for someone with a passion for clean UI, responsive design, and Angular development, let's talk.",
+  "contact.name": "What's your name?",
+  "contact.namePlaceholder": "Your name goes here",
+  "contact.email": "What's your email?",
+  "contact.emailPlaceholder": "youremail@email.com",
+  "contact.message": "How can I help you?",
+  "contact.messagePlaceholder": "Hello André, I am interested in...",
+  "contact.privacy": "I've read the",
+  "contact.privacyLink": "privacy policy",
+  "contact.send": "Send",
+  "contact.legal": "Legal Notice",
+
+  "project.sharkie.description": "A classic side-scrolling jump’n’run game built with JavaScript and HTML5 Canvas. Use keyboard controls to collect coins, defeat enemies, and dive through underwater levels.",
+"project.sharkie.implementation": "Created game logic using object-oriented JavaScript. Used HTML5 Canvas for rendering. Built animations, hitboxes, and level mechanics.",
+
+"project.pokedex.description": "Build your own digital Pokédex. Project uses API data to fetch and display detailed Pokémon stats, abilities, and visuals in an engaging and interactive way.",
+"project.pokedex.implementation": "Used REST API calls to dynamically load and render Pokémon data. Built dynamic search and filter components with responsive design.",
+
+  "legal.title": "Legal Notice",
+  "legal.responsible": "Responsible Entity",
+  "legal.name": "André Sutter",
+  "legal.address": "Baslerstrasse 29",
+  "legal.zip": "8048 Zurich",
+  "legal.country": "Switzerland",
+  "legal.email": "andre-sutter@hotmail.com",
+
+  "legal.disclaimerTitle": "Disclaimer",
+  "legal.disclaimer1": "The author assumes no liability for the correctness, accuracy, timeliness, reliability, or completeness of the information provided.",
+  "legal.disclaimer2": "Liability claims against the author for material or immaterial damages arising from access or use/non-use of the published information, misuse of the connection, or technical faults are excluded.",
+  "legal.disclaimer3": "All offers are non-binding. The author expressly reserves the right to change, supplement, delete parts of the pages or the entire offer without prior notice, or to cease publication temporarily or permanently.",
+
+  "legal.linkDisclaimerTitle": "Disclaimer for Links and Content",
+  "legal.linkDisclaimer": "References and links to third-party websites lie outside our area of responsibility. Any responsibility for such websites is rejected. Access and use of such websites are at the user’s own risk.",
+
+  "legal.copyrightTitle": "Copyright Declaration",
+  "legal.copyright": "The copyright and all other rights to content, images, photos, or other files on this website belong exclusively to Martin Jaros or the specifically named rights holders. For the reproduction of any elements, the written consent of the copyright holder must be obtained in advance."
+}
+
+
+
+
+
+

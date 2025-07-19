@@ -1,0 +1,48 @@
+<header class="detail-header">
+  <div class="nav-container">
+    <a routerLink="/" class="logo">AS</a>
+
+    <a routerLink="/" fragment="about" class="nav-link">{{ i18n.get('nav.about') }}</a>
+    <a routerLink="/" fragment="skills" class="nav-link">{{ i18n.get('nav.skills') }}</a>
+    <a routerLink="/" fragment="projects" class="nav-link active">{{ i18n.get('nav.projects') }}</a>
+    <a routerLink="/" fragment="contact" class="nav-link">{{ i18n.get('nav.contact') }}</a>
+
+    <div class="lang-toggle">
+      <input type="checkbox" id="lang-switch" hidden (change)="toggleLanguage($event)" />
+      <label for="lang-switch" class="lang-en">EN</label>
+      <label class="switch" for="lang-switch"><span class="slider"></span></label>
+      <label for="lang-switch" class="lang-de">DE</label>
+    </div>
+
+    <button class="burger" (click)="isMenuOpen = !isMenuOpen">☰</button>
+  </div>
+
+  <nav class="mobile-menu" [ngClass]="{ 'open': isMenuOpen }">
+    <a routerLink="/" class="logo">AS</a>
+    <button class="close-btn" (click)="isMenuOpen = false">✕</button>
+
+    <a routerLink="/" fragment="about" class="nav-link" (click)="isMenuOpen = false">{{ i18n.get('nav.about') }}</a>
+    <a routerLink="/" fragment="skills" class="nav-link" (click)="isMenuOpen = false">{{ i18n.get('nav.skills') }}</a>
+    <a routerLink="/" fragment="projects" class="nav-link" (click)="isMenuOpen = false">{{ i18n.get('nav.projects') }}</a>
+    <a routerLink="/" fragment="contact" class="nav-link" (click)="isMenuOpen = false">{{ i18n.get('nav.contact') }}</a>
+
+    <div class="lang-toggle">
+      <input type="checkbox" id="lang-switch-mobile" hidden (change)="toggleLanguage($event)" />
+      <label for="lang-switch-mobile" class="lang-en">EN</label>
+      <label class="switch" for="lang-switch-mobile"><span class="slider"></span></label>
+      <label for="lang-switch-mobile" class="lang-de">DE</label>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com" target="_blank">
+        <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/AndreSutter" target="_blank">
+        <img src="assets/img/github.svg" alt="GitHub" />
+      </a>
+      <a href="mailto:example@mail.com">
+        <img src="assets/img/mailbox.svg" alt="Mail" />
+      </a>
+    </div>
+  </nav>
+</header>

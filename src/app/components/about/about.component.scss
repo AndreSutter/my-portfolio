@@ -1,0 +1,283 @@
+.about-section {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 64px;
+  padding: 144px 120px;
+  width: 100%;
+  box-sizing: border-box;
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+
+    .label {
+      position: relative;
+      width: fit-content;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    .label:nth-child(1) {
+      transform: rotate(-2deg);
+      z-index: 3;
+    }
+
+    .label:nth-child(2) {
+      transform: rotate(0deg);
+      margin-top: -36px;
+      z-index: 4;
+    }
+
+    .label:nth-child(3) {
+      transform: rotate(3deg);
+      margin-top: -36px;
+      z-index: 2;
+    }
+  }
+
+  .about-right {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .subheading {
+      align-self: flex-start;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      align-self: flex-start;
+      font-size: 64px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .underline {
+      align-self: flex-start;
+      margin: 0 0 24px;
+      width: 303px;
+      height: auto;
+    }
+
+    .description {
+      align-self: flex-start;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .talk-btn {
+      margin-top: 24px;
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      border: 2px solid black;
+      background: white;
+      color: black;
+      box-shadow: 4px 4px 0 black;
+      transition: all 0.15s ease;
+      transform: translateY(0);
+      text-decoration: none;
+
+      &:hover {
+        background: #ff6b55;
+        color: white;
+        box-shadow: none;
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  @media (max-width: 1380px) {
+    padding: 96px 60px;
+    gap: 48px;
+
+    .about-left,
+    .about-right {
+      max-width: 500px;
+    }
+
+    .about-left {
+      .label {
+        margin-bottom: -12px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-top: -12px;
+        }
+      }
+    }
+
+    .about-right {
+      h2 {
+        font-size: 52px;
+      }
+
+      .description {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 80px 48px;
+    gap: 40px;
+
+    .about-left,
+    .about-right {
+      width: 50%;
+    }
+
+    .about-right {
+      h2 {
+        font-size: 52px;
+      }
+
+      .description {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+    padding: 72px 36px;
+    gap: 32px;
+
+    .about-left,
+    .about-right {
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    .about-left {
+      .label {
+        transform: none !important;
+        margin: 0 0 16px;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+
+        span {
+          font-size: 18px;
+          gap: 8px;
+        }
+
+        .icon {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .about-right {
+      h2 {
+        font-size: 56px;
+      }
+
+      .underline {
+        width: 260px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    padding: 64px 2px;
+    gap: 48px;
+
+    .about-left,
+    .about-right {
+      width: 343px;
+      align-items: flex-start;
+    }
+
+    .about-left {
+      .label {
+        transform: none !important;
+        margin: 0 0 16px;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+
+        span {
+          font-size: 18px;
+          gap: 8px;
+        }
+
+        .icon {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .about-right {
+      .subheading {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 48px;
+      }
+
+      .underline {
+        width: 227px;
+        margin-bottom: 16px;
+      }
+
+      .description {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+
+      .talk-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<app-detail-header></app-detail-header>
+
+<section class="project-detail">
+  <div class="content-wrapper">
+    <div class="left-column">
+      <a routerLink="/" fragment="projects" class="go-back">
+        <img src="assets/img/orangesmallarrow.png" alt="Back Arrow" />
+        {{ t()('project.back') }}
+      </a>
+
+      <h1 class="title">{{ project.title }}</h1>
+      <img src="assets/img/blueline.png" alt="" class="subtitle-underline" />
+
+      <h2 class="section-heading">{{ t()('project.description') }}</h2>
+      <p class="body">{{ t()(project.description) }}</p>
+
+      <h2 class="section-heading">{{ t()('project.details') }}</h2>
+      <p class="body">{{ t()(project.implementation) }}</p>
+
+      <p class="duration">
+        <strong>{{ t()('project.duration') }}:</strong> 5 weeks
+      </p>
+
+      <ul class="tech-icons">
+        <li><img src="assets/img/css.png" alt="CSS" /></li>
+        <li><img src="assets/img/html.png" alt="HTML" /></li>
+        <li><img src="assets/img/firebase.png" alt="Firebase" /></li>
+        <li><img src="assets/img/angular.png" alt="Angular" /></li>
+        <li><img src="assets/img/typescript.png" alt="TypeScript" /></li>
+      </ul>
+    </div>
+
+    <div class="right-column">
+      <div class="mockup-wrapper">
+        <img [src]="project.image" alt="{{ project.title }} mock-up" />
+        <img *ngIf="project.sticker" [src]="project.sticker" class="sticker" alt="Sticker" />
+      </div>
+
+      <div class="cta-row">
+        <a href="https://github.com/AndreSutter" target="_blank" class="primary-btn">
+          {{ t()('project.github') }}
+        </a>
+        <a href="https://your-live-demo.com" target="_blank" class="primary-btn">
+          {{ t()('project.live') }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="next-project">
+    <a [routerLink]="['/projects', nextProjectSlug]">
+      {{ t()('project.next') }}
+      <img src="assets/img/yellowsmallarrow.png" alt="Yellow arrow" />
+    </a>
+  </div>
+</section>

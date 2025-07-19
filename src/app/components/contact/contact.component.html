@@ -1,0 +1,122 @@
+<section class="contact-section">
+  <div class="orange-badge">
+    <svg viewBox="0 0 200 200" class="badge-svg" aria-label="André Sutter Frontend Developer">
+      <defs>
+        <clipPath id="badgeClip">
+          <circle cx="100" cy="100" r="100" />
+        </clipPath>
+        <path id="badgePath" d="M100 100 m-80 0 a80 80 0 1 1 160 0 a80 80 0 1 1 -160 0" />
+      </defs>
+
+      <image href="assets/img/rundorange.png"
+             width="200" height="200"
+             clip-path="url(#badgeClip)" />
+
+      <text font-family="'Bricolage Grotesque', sans-serif"
+            font-size="14" font-weight="700"
+            letter-spacing="1" fill="#000">
+        <textPath href="#badgePath" startOffset="0%">
+          André Sutter – Frontend Developer • André Sutter – Frontend Developer •
+        </textPath>
+      </text>
+
+      <text x="100" y="118" text-anchor="middle"
+            font-family="'Bricolage Grotesque', sans-serif"
+            font-size="64" font-weight="700" fill="#000">
+        AS
+      </text>
+    </svg>
+  </div>
+
+   <div class="contact-inner">
+    <div class="contact-left">
+      <p class="label">{{ i18n.get('contact.label') }}</p>
+      <h2 class="title" [innerHTML]="i18n.get('contact.title')"></h2>
+      <p class="description">{{ i18n.get('contact.description1') }}</p>
+      <p class="description">{{ i18n.get('contact.description2') }}</p>
+      <img src="assets/img/yellowarrow.png" alt="Arrow" class="arrow" />
+    </div>
+
+    <div class="contact-right">
+      <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <label>
+          {{ i18n.get('contact.name') }}
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="contactData.name"
+            [placeholder]="i18n.get('contact.namePlaceholder')"
+            required />
+        </label>
+
+        <label>
+          {{ i18n.get('contact.email') }}
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="contactData.email"
+            [placeholder]="i18n.get('contact.emailPlaceholder')"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            required />
+        </label>
+
+        <label>
+          {{ i18n.get('contact.message') }}
+          <input
+            type="text"
+            name="message"
+            [(ngModel)]="contactData.message"
+            [placeholder]="i18n.get('contact.messagePlaceholder')"
+            minlength="4"
+            required />
+        </label>
+
+        <label class="checkbox">
+          <input
+            type="checkbox"
+            name="privacy"
+            [(ngModel)]="contactData.privacyAccepted"
+            required />
+          <span class="checkbox-text">
+            {{ i18n.get('contact.privacy') }}
+            <a href="#">{{ i18n.get('contact.privacyLink') }}</a>
+          </span>
+        </label>
+
+        <button type="submit" [disabled]="!contactForm.valid">
+          {{ i18n.get('contact.send') }}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer-row">
+    <div class="footer-left">
+      <p class="copyright">© André Sutter 2024</p>
+    </div>
+
+    <nav class="footer-links">
+      <div class="hover-button-wrapper">
+       <a href="/impressum" class="footer-link">{{ i18n.get('contact.legal') }}</a>
+      </div>
+      <div class="hover-button-wrapper github">
+        <a href="https://github.com/AndreSutter" target="_blank" class="footer-link">
+          <img src="assets/img/github.svg" alt="GitHub Icon" class="hover-icon" />
+          GitHub
+        </a>
+      </div>
+      <div class="hover-button-wrapper linkedin">
+        <a href="https://www.linkedin.com/in/andr%C3%A9-sutter-1760b7285" target="_blank" class="footer-link">
+          <img src="assets/img/linkedin.svg" alt="LinkedIn Icon" class="hover-icon" />
+          LinkedIn
+        </a>
+      </div>
+      <div class="hover-button-wrapper email">
+        <a href="mailto:andre-sutter@hotmail.com" class="footer-link">
+          <img src="assets/img/mailbox.svg" alt="Email Icon" class="hover-icon" />
+          Email
+        </a>
+      </div>
+    </nav>
+  </footer>
+</section>

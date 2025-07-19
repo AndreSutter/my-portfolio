@@ -1,0 +1,233 @@
+.testimonials-section {
+  padding: 0px 24px 80px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .header {
+    text-align: right;
+    position: relative;
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateY(-40px);
+
+    .arrow-subtitle {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 36px;
+      justify-content: flex-end;
+
+      .arrow {
+        height: 36px;
+        width: auto;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #666;
+        margin: 0;
+      }
+    }
+
+    .section-title {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 1;
+      letter-spacing: 0;
+      margin: 0;
+      text-align: right;
+
+      .highlight {
+        color: #000;
+      }
+    }
+  }
+
+  .testimonials-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    transform: translateY(-40px);
+
+    .testimonial-card {
+      position: relative;
+      width: 512px;
+      height: 368px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+      margin: 0 -60px;
+      transform-origin: center;
+      transition: all 0.3s ease;
+
+      &:nth-child(1) {
+        transform: rotate(-4deg);
+        z-index: 1;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(4deg);
+        z-index: 1;
+      }
+
+      &:hover {
+        transform: translateY(-12px) scale(1.03) rotate(0deg);
+        z-index: 5;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .paper-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        filter: brightness(1.35);
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+        padding: 24px;
+
+        .text {
+          font-family: 'Bricolage Grotesque', sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.2;
+          margin-bottom: 20px;
+          text-align: left;
+        }
+
+        .author-info {
+          text-align: left;
+
+          .name {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1.2;
+            margin-bottom: 4px;
+          }
+
+          .role {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-wrapper {
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(0);
+
+      .testimonial-card {
+        margin: 20px 0;
+        transform: none !important;
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    .header {
+      transform: translateY(0);
+      align-items: center;
+      text-align: center;
+
+      .arrow-subtitle {
+        justify-content: center;
+
+        .arrow {
+          width: 250px;
+          height: 36px;
+        }
+      }
+
+      .section-title {
+        font-size: 48px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    .testimonials-wrapper {
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(0);
+
+      .testimonial-card {
+        margin: 20px 0;
+        transform: none !important;
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    .header {
+      align-items: center;
+      text-align: center;
+
+      .arrow-subtitle {
+        justify-content: center;
+
+        .arrow {
+          width: 250px;
+          height: 36px;
+        }
+      }
+
+      .section-title {
+        font-size: 52px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    .testimonials-wrapper {
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(0);
+
+      .testimonial-card {
+        margin: 20px 0;
+        transform: none !important;
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    .header {
+      align-items: center;
+      text-align: center;
+
+      .arrow-subtitle {
+        justify-content: center;
+
+        .arrow {
+          width: 250px;
+          height: 36px;
+        }
+      }
+
+      .section-title {
+        font-size: 64px;
+        text-align: center;
+      }
+    }
+  }
+}

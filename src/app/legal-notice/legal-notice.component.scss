@@ -1,0 +1,114 @@
+.legal-notice {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 160px 0 40px;
+  color: #000;
+  font-family: 'Bricolage Grotesque', sans-serif;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../../assets/img/backgroundpaper.png') repeat-x top center;
+    background-size: auto 100%;
+    transform: rotate(180deg);
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .legal-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .legal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+
+    .back-button {
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        filter: invert(1); // macht schwarzes Icon auf dunklem Hintergrund weiß
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffd400;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #f8f9fa;
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: #87cefa;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    padding: 120px 0 32px;
+
+    .legal-wrapper {
+      padding: 0 16px;
+    }
+
+    .legal-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .back-button img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

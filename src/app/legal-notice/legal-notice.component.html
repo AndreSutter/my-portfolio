@@ -1,0 +1,34 @@
+<section class="legal-notice">
+  <div class="legal-wrapper">
+
+    <div class="legal-header">
+      <h1>{{ i18n.get('legal.title') }}</h1>
+      <button class="back-button" (click)="goBack()" aria-label="Zurück">
+        <img src="assets/img/back.png" alt="Zurück" />
+      </button>
+    </div>
+
+    <h2>{{ i18n.get('legal.responsible') }}</h2>
+    <p>
+      {{ i18n.get('legal.name') }}<br />
+      {{ i18n.get('legal.address') }}<br />
+      {{ i18n.get('legal.zip') }}<br />
+      {{ i18n.get('legal.country') }}
+    </p>
+    <p>
+      <a href="mailto:{{ i18n.get('legal.email') }}">{{ i18n.get('legal.email') }}</a>
+    </p>
+
+    <h2>{{ i18n.get('legal.disclaimerTitle') }}</h2>
+    <p>{{ i18n.get('legal.disclaimer1') }}</p>
+    <p>{{ i18n.get('legal.disclaimer2') }}</p>
+    <p>{{ i18n.get('legal.disclaimer3') }}</p>
+
+    <h2>{{ i18n.get('legal.linkDisclaimerTitle') }}</h2>
+    <p>{{ i18n.get('legal.linkDisclaimer') }}</p>
+
+    <h2>{{ i18n.get('legal.copyrightTitle') }}</h2>
+    <p>{{ i18n.get('legal.copyright') }}</p>
+
+  </div>
+</section>

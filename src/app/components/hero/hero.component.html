@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<div class="social-icons">
+  <a href="https://www.linkedin.com" target="_blank">
+    <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/AndreSutter" target="_blank">
+    <img src="assets/img/github.svg" alt="GitHub" />
+  </a>
+  <a href="mailto:example@mail.com">
+    <img src="assets/img/mailbox.svg" alt="Mail" />
+  </a>
+</div>
+
+<section class="hero-wrapper">
+  <button class="hello-btn">
+    <span class="default-text">{{ i18n.get('hero.hello') }}</span>
+    <span class="hover-text">{{ i18n.get('hero.name') }}</span>
+  </button>
+
+  <div class="title-wrapper">
+    <div class="hero-text">
+      <h1>{{ i18n.get('hero.title1') }}</h1>
+      <h2>{{ i18n.get('hero.title2') }}</h2>
+    </div>
+  </div>
+
+  <a href="#contact" class="cta-btn">{{ i18n.get('hero.cta') }}</a>
+
+  <div class="polaroid-rotated">
+    <div class="polaroid-wrapper">
+      <img src="assets/img/andre.jpg" alt="André" class="portrait-inside" />
+      <img src="assets/img/polaroid.png" alt="Polaroid-Rahmen" class="polaroid-frame" />
+      <span class="caption">{{ i18n.get('hero.caption') }}</span>
+    </div>
+  </div>
+</section>

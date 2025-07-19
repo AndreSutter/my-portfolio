@@ -1,0 +1,69 @@
+<section class="projects-section">
+  <div class="top-row">
+    <div class="projects-left">
+      <p class="subheading">{{ i18n.get('projects.subheading') }}</p>
+      <h2 class="headline">
+        {{ i18n.get('projects.headline') }}
+        <img src="assets/img/yellowline.png" alt="Underline" class="underline" />
+      </h2>
+      <p class="intro">
+        {{ i18n.get('projects.intro') }}
+      </p>
+    </div>
+
+    <!-- Featured Project (Join) -->
+    <div class="featured-project">
+      <div class="project">
+        <div class="image-wrapper">
+          <img src="assets/img/Laptop.png" alt="Join Screenshot" />
+          <div class="overlay">
+            <a [routerLink]="['/projects', 'join']">
+              <button class="details-btn">{{ i18n.get('projects.detailsBtn') }}</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="badge-wrapper">
+        <img src="assets/img/Sticker.png" alt="Badge" class="badge" />
+      </div>
+      <div class="description">
+        <h3>Join</h3>
+        <p>{{ i18n.get('projects.join.desc') }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-row">
+    <!-- Sharkie -->
+    <div class="project">
+      <div class="image-wrapper">
+        <img src="assets/img/sharkie.png" alt="Sharkie Screenshot" />
+        <div class="overlay">
+          <a [routerLink]="['/projects', 'sharkie']">
+            <button class="details-btn">{{ i18n.get('projects.detailsBtn') }}</button>
+          </a>
+        </div>
+      </div>
+      <div class="description">
+        <h3>Sharkie</h3>
+        <p>{{ i18n.get('projects.sharkie.desc') }}</p>
+      </div>
+    </div>
+
+    <!-- Pokedex -->
+    <div class="project">
+      <div class="image-wrapper">
+        <img src="assets/img/pokedex.png" alt="Pokedex Screenshot" />
+        <div class="overlay">
+          <a [routerLink]="['/projects', 'pokedex']">
+            <button class="details-btn">{{ i18n.get('projects.detailsBtn') }}</button>
+          </a>
+        </div>
+      </div>
+      <div class="description">
+        <h3>Pokédex</h3>
+        <p>{{ i18n.get('projects.pokedex.desc') }}</p>
+      </div>
+    </div>
+  </div>
+</section>

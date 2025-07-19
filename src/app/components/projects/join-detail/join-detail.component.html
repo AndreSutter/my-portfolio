@@ -1,0 +1,54 @@
+<app-detail-header></app-detail-header>
+
+<section class="project-detail">
+  <div class="content-wrapper">
+    <div class="left-column">
+      <a routerLink="/" fragment="projects" class="go-back">
+        <img src="assets/img/orangesmallarrow.png" alt="Back Arrow" />
+        {{ i18n.get('project.back') }}
+      </a>
+
+      <h1 class="title">Join</h1>
+      <img src="assets/img/blueline.png" class="subtitle-underline" alt="" />
+
+      <h2 class="section-heading">{{ i18n.get('project.description') }}</h2>
+      <p class="body">
+        {{ i18n.get('project.join.description') }}
+      </p>
+
+      <h2 class="section-heading">{{ i18n.get('project.details') }}</h2>
+      <p class="body">
+        {{ i18n.get('project.join.implementation') }}
+      </p>
+
+      <p class="duration"><strong>{{ i18n.get('project.duration') }}</strong> 5 weeks</p>
+
+      <ul class="tech-icons">
+        <li><img src="assets/img/css.png" alt="CSS" /></li>
+        <li><img src="assets/img/html.png" alt="HTML" /></li>
+        <li><img src="assets/img/firebase.png" alt="Firebase" /></li>
+        <li><img src="assets/img/angular.png" alt="Angular" /></li>
+        <li><img src="assets/img/typescript.png" alt="TypeScript" /></li>
+      </ul>
+    </div>
+
+    <div class="right-column">
+      <div class="mockup-wrapper">
+        <img src="assets/img/Laptop.png" alt="Join mock-up" />
+        <img src="assets/img/Sticker.png" class="sticker" alt="Featured Project badge" />
+      </div>
+
+      <div class="cta-row">
+        <a href="https://github.com/AndreSutter" target="_blank" class="primary-btn">GitHub</a>
+        <a href="https://…" target="_blank" class="primary-btn secondary">Live Test</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="next-project">
+    <a [routerLink]="['/projects', nextProjectSlug]">
+      {{ i18n.get('project.next') }}
+      <img src="assets/img/yellowsmallarrow.png" alt="Yellow arrow" />
+    </a>
+  </div>
+</section>
