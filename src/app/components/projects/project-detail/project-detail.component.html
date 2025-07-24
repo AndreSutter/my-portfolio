@@ -37,10 +37,10 @@
       </div>
 
       <div class="cta-row">
-        <a href="https://github.com/AndreSutter" target="_blank" class="primary-btn">
+        <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="primary-btn">
           {{ t()('project.github') }}
         </a>
-        <a href="https://your-live-demo.com" target="_blank" class="primary-btn">
+        <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="primary-btn">
           {{ t()('project.live') }}
         </a>
       </div>
