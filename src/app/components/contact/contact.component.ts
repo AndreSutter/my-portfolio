@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { RouterModule } from '@angular/router'; 
 import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, RouterModule], 
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
@@ -21,8 +22,11 @@ export class ContactComponent {
 
   mailTest = false;
 
+  // ✅ Erfolgsmeldung anzeigen
+  showSuccessMessage: boolean = false;
+
   post = {
-    endPoint: 'http://localhost/sendMail.php',
+    endPoint: 'https://andre-sutter.ch/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -40,6 +44,8 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             console.log('✅ Mail sent successfully:', response);
+            this.showSuccessMessage = true;
+            setTimeout(() => this.showSuccessMessage = false, 6000);
             form.resetForm();
           },
           error: (error) => {
@@ -49,6 +55,8 @@ export class ContactComponent {
         });
     } else if (form.submitted && form.valid && this.mailTest) {
       console.log('🧪 Test mode – no real send:', this.contactData);
+      this.showSuccessMessage = true;
+      setTimeout(() => this.showSuccessMessage = false, 7000);
       form.resetForm();
     }
   }

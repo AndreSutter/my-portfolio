@@ -10,7 +10,7 @@
 
     <div class="skills-content">
       <div class="paper-description">
-        <img src="assets/img/skillspanel.png" alt="Panel" class="panel-bg" />
+        <img src="assets/img/skillspanel.webp" alt="Panel" class="panel-bg" />
         <p class="description-text">{{ i18n.get('skills.description') }}</p>
       </div>
 
@@ -30,8 +30,6 @@
 
     <div class="skills-sticker" (click)="toggleSticker()">
       <img [src]="stickerSrc" alt="Sticker background" class="layer base" [class.rounded]="isYellow" />
-      <img src="assets/img/arrow.png" alt="Arrow" class="layer arrow" [hidden]="isYellow" />
-      <img src="assets/img/pulltopeeltext.png" alt="Text" class="layer text" [hidden]="isYellow" />
     </div>
   </div>
 </section>

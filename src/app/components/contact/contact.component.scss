@@ -16,7 +16,7 @@
     z-index: 0;
   }
 
-  > * {
+  >* {
     position: relative;
     z-index: 1;
   }
@@ -42,7 +42,7 @@
     justify-content: space-between;
     width: 1200px;
     max-width: 100%;
-    margin: 120px auto 0;
+    margin: 70px auto 0;
     padding: 0 80px;
     gap: 40px;
   }
@@ -77,6 +77,16 @@
       width: 280px;
       height: 44px;
       margin-top: 32px;
+      opacity: 0;
+      transform: translateX(-40px);
+      animation: slideInArrow 1s ease-out 0.5s forwards;
+    }
+
+    @keyframes slideInArrow {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   }
 
@@ -90,7 +100,8 @@
     .contact-form {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 10px;
+      min-height: 440px;
 
       label {
         font-weight: 500;
@@ -103,6 +114,18 @@
         &:hover,
         &:focus-within {
           color: #ff914d;
+        }
+
+        &.error {
+          color: #ff4d4f;
+
+          input {
+            border-bottom-color: #ff4d4f !important;
+          }
+
+          .checkbox-text {
+            color: #ff4d4f;
+          }
         }
 
         input[type='text'],
@@ -124,6 +147,22 @@
             outline: none;
             border-color: #ffd64b;
           }
+
+          &.ng-invalid.ng-touched {
+            border-bottom-color: #ff4d4f;
+          }
+        }
+
+        .error-message {
+          min-height: 0px;
+          font-size: 14px;
+          margin-top: 0px;
+          visibility: hidden;
+          color: #ff4d4f;
+        }
+
+        .error-message.visible {
+          visibility: visible;
         }
 
         &.checkbox {
@@ -141,6 +180,7 @@
             white-space: normal;
 
             a {
+              cursor: pointer;
               color: #87cefa;
               text-decoration: underline;
             }
@@ -189,7 +229,7 @@
     .footer-left {
       .copyright {
         color: #ccc;
-        margin-bottom:34px;
+        margin-bottom: 34px;
       }
     }
 
@@ -264,98 +304,170 @@
       width: 120px;
     }
 
+    .contact-inner {
+      flex-direction: column;
+      padding: 0;
+      margin-top: 0;
+      gap: 40px;
+    }
 
-      .contact-inner {
-        flex-direction: column;
-        padding: 0;
-        margin-top: 0;
-        gap: 40px;
+    .contact-left,
+    .contact-right {
+      width: 100%;
+    }
+
+    .contact-left {
+      .label {
+        font-size: 18px;
+        margin-bottom: 12px;
       }
 
-      .contact-left,
-      .contact-right {
+      .title {
+        font-size: 48px;
         width: 100%;
+        margin-bottom: 24px;
       }
 
-      .contact-left {
-        .label {
-          font-size: 18px;
-          margin-bottom: 12px;
+      .description {
+        font-size: 18px;
+        text-align: justify;
+        margin-bottom: 16px;
+      }
+
+      .arrow {
+        width: 152px;
+        height: 24px;
+        margin-top: 16px;
+      }
+    }
+
+    .contact-right {
+      padding: 0;
+
+      .contact-form {
+        gap: 16px;
+
+        label {
+          font-size: 20px;
+
+          input[type='text'],
+          input[type='email'],
+          textarea {
+            font-size: 16px;
+            padding: 10px;
+          }
+
+          .error-message {
+            font-size: 13px;
+          }
+
+          &.checkbox {
+            flex-direction: row;
+            font-size: 13px;
+            align-items: flex-start;
+
+            .checkbox-text {
+              white-space: normal;
+            }
+          }
         }
 
-        .title {
-          font-size: 48px;
+        button {
           width: 100%;
-          margin-bottom: 24px;
-        }
-
-        .description {
-          font-size: 18px;
-          text-align: justify;
-          margin-bottom: 16px;
-        }
-
-        .arrow {
-          width: 152px;
-          height: 24px;
-          margin-top: 16px;
+          margin-top: 8px;
         }
       }
+    }
 
-      .contact-right {
-        padding: 0;
+    .footer-row {
+      flex-direction: column;
+      padding: 0;
+      gap: 8px;
+      text-align: center;
+      font-size: 16px;
 
-        .contact-form {
-          gap: 16px;
+      .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
 
-          label {
-            font-size: 20px;
-
-            input[type='text'],
-            input[type='email'],
-            textarea {
-              font-size: 16px;
-              padding: 10px;
-            }
-
-            &.checkbox {
-              flex-direction: row;
-              font-size: 13px;
-              align-items: flex-start;
-
-              .checkbox-text {
-                white-space: normal;
-              }
-            }
-          }
-
-          button {
-            width: 100%;
-            margin-top: 8px;
-          }
+        .hover-button-wrapper {
+          flex: 0 0 auto;
         }
-      }
 
-      .footer-row {
-        flex-direction: column;
-        padding: 0;
-        gap: 8px;
-        text-align: center;
-        font-size: 16px;
-
-        .footer-links {
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 40px;
-
-          .hover-button-wrapper {
-            flex: 0 0 auto;
-          }
-
-          .footer-link {
-            font-size: 14px;
-          }
+        .footer-link {
+          font-size: 14px;
         }
       }
     }
   }
+}
+
+.success-message {
+  margin-top: 16px;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ff914d;
+  padding: 12px 20px;
+  border: 1px solid #ff914d;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.success-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.success-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 12px;
+  background: rgba(255, 145, 77, 0.1);
+  color: #ffffff;
+  border: 1px solid #ff914d;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 100%;
+  text-align: center;
+  animation: slideDownFade 0.4s ease-out;
+
+  .success-icon {
+    color: #ff914d;
+    font-size: 16px;
+    transform: translateY(1px);
+  }
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+

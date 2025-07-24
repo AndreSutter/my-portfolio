@@ -5,9 +5,11 @@ import de from '../assets/i18n/de.json';
 
 export type Lang = 'en' | 'de';
 
+type TranslationDictionary = Record<string, string | string[]>;
+
 @Injectable({ providedIn: 'root' })
 export class TranslationService {
-  private readonly dict: Record<Lang, Record<string, string>> = { en, de };
+  private readonly dict: Record<Lang, TranslationDictionary> = { en, de };
 
   private readonly current$ = new BehaviorSubject<Lang>(
     (localStorage.getItem('lang') as Lang) || 'en'
@@ -16,7 +18,6 @@ export class TranslationService {
   readonly lang$ = this.current$.asObservable();
 
   constructor() {
-    // Sprache im localStorage merken
     this.current$.subscribe((lang) => localStorage.setItem('lang', lang));
   }
 
@@ -29,11 +30,11 @@ export class TranslationService {
     this.current$.next(newLang);
   }
 
-  get(key: string): string {
+  get(key: string): string | string[] {
     return this.dict[this.current$.value][key] ?? key;
   }
 
-  all(): Record<string, string> {
+  all(): TranslationDictionary {
     return this.dict[this.current$.value];
   }
 

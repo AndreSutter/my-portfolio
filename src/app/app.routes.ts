@@ -15,6 +15,19 @@ export const routes: Routes = [
       import('./legal-notice/legal-notice.component').then(
         m => m.LegalNoticeComponent
       )
+  },
+  {
+    path: 'datenschutzerklaerung',
+    loadComponent: () =>
+      import('./components/datenschutz/datenschutz.component').then(
+        m => m.DatenschutzComponent
+      )
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./components/contact/contact.component').then(
+        m => m.ContactComponent
+      )
   }
 ];
-

@@ -8,27 +8,23 @@
         <path id="badgePath" d="M100 100 m-80 0 a80 80 0 1 1 160 0 a80 80 0 1 1 -160 0" />
       </defs>
 
-      <image href="assets/img/rundorange.png"
-             width="200" height="200"
-             clip-path="url(#badgeClip)" />
+      <image href="assets/img/rundorange.png" width="200" height="200" clip-path="url(#badgeClip)" />
 
-      <text font-family="'Bricolage Grotesque', sans-serif"
-            font-size="14" font-weight="700"
-            letter-spacing="1" fill="#000">
+      <text font-family="'Bricolage Grotesque', sans-serif" font-size="14" font-weight="700" letter-spacing="1"
+        fill="#000">
         <textPath href="#badgePath" startOffset="0%">
           André Sutter – Frontend Developer • André Sutter – Frontend Developer •
         </textPath>
       </text>
 
-      <text x="100" y="118" text-anchor="middle"
-            font-family="'Bricolage Grotesque', sans-serif"
-            font-size="64" font-weight="700" fill="#000">
+      <text x="100" y="118" text-anchor="middle" font-family="'Bricolage Grotesque', sans-serif" font-size="64"
+        font-weight="700" fill="#000">
         AS
       </text>
     </svg>
   </div>
 
-   <div class="contact-inner">
+  <div class="contact-inner">
     <div class="contact-left">
       <p class="label">{{ i18n.get('contact.label') }}</p>
       <h2 class="title" [innerHTML]="i18n.get('contact.title')"></h2>
@@ -39,53 +35,73 @@
 
     <div class="contact-right">
       <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+        <!-- Name -->
         <label>
           {{ i18n.get('contact.name') }}
-          <input
-            type="text"
-            name="name"
-            [(ngModel)]="contactData.name"
-            [placeholder]="i18n.get('contact.namePlaceholder')"
-            required />
+          <input type="text" name="name" [(ngModel)]="contactData.name"
+            [placeholder]="i18n.get('contact.namePlaceholder')" required pattern="^[A-Za-zÀ-ÿ]{2,} [A-Za-zÀ-ÿ]{2,}$"
+            #name="ngModel" />
+
+          <div class="error-message" [class.visible]="name.errors?.['required'] && name.touched">
+            Oops! it seems your name is missing
+          </div>
+          <div class="error-message" [class.visible]="name.errors?.['pattern'] && name.touched">
+            Please enter your first and last name
+          </div>
         </label>
 
+        <!-- Email -->
         <label>
           {{ i18n.get('contact.email') }}
-          <input
-            type="email"
-            name="email"
-            [(ngModel)]="contactData.email"
+          <input type="email" name="email" [(ngModel)]="contactData.email"
             [placeholder]="i18n.get('contact.emailPlaceholder')"
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            required />
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required #email="ngModel" />
+          <div class="error-message" [class.visible]="email.errors?.['required'] && email.touched">
+            Hoppla! your email is required
+          </div>
+          <div class="error-message" [class.visible]="email.errors?.['pattern'] && email.touched">
+            Please enter a valid email address
+          </div>
         </label>
 
+      
         <label>
           {{ i18n.get('contact.message') }}
-          <input
-            type="text"
-            name="message"
-            [(ngModel)]="contactData.message"
-            [placeholder]="i18n.get('contact.messagePlaceholder')"
-            minlength="4"
-            required />
+          <input type="text" name="message" [(ngModel)]="contactData.message"
+            [placeholder]="i18n.get('contact.messagePlaceholder')" minlength="10" required #message="ngModel" />
+          <div class="error-message" [class.visible]="message.errors?.['required'] && message.touched">
+            What do you need to develop?
+          </div>
+          <div class="error-message"
+            [class.visible]="message.errors?.['minlength'] && message.dirty && message.touched">
+            Please enter at least 10 characters
+          </div>
         </label>
 
+      
         <label class="checkbox">
-          <input
-            type="checkbox"
-            name="privacy"
-            [(ngModel)]="contactData.privacyAccepted"
-            required />
+          <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacyAccepted" required #privacy="ngModel" />
           <span class="checkbox-text">
             {{ i18n.get('contact.privacy') }}
-            <a href="#">{{ i18n.get('contact.privacyLink') }}</a>
+            <a routerLink="/datenschutzerklaerung">{{ i18n.get('contact.privacyLink') }}</a>
           </span>
+          <div class="error-message" [class.visible]="privacy.errors?.['required'] && privacy.touched">
+            Please accept the privacy policy
+          </div>
         </label>
 
-        <button type="submit" [disabled]="!contactForm.valid">
+        <button type="submit" [disabled]="!contactForm.valid" *ngIf="!showSuccessMessage">
           {{ i18n.get('contact.send') }}
         </button>
+
+        <div class="success-wrapper" *ngIf="showSuccessMessage">
+          <div class="success-placeholder">
+            <span class="success-icon">✔</span>
+            <span>Danke! Deine Nachricht wurde erfolgreich versendet. Ich melde mich so bald wie möglich bei dir.</span>
+          </div>
+        </div>
+
       </form>
     </div>
   </div>
@@ -97,7 +113,7 @@
 
     <nav class="footer-links">
       <div class="hover-button-wrapper">
-       <a href="/impressum" class="footer-link">{{ i18n.get('contact.legal') }}</a>
+        <a href="/impressum" class="footer-link">{{ i18n.get('contact.legal') }}</a>
       </div>
       <div class="hover-button-wrapper github">
         <a href="https://github.com/AndreSutter" target="_blank" class="footer-link">

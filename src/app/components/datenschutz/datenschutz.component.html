@@ -1,0 +1,107 @@
+<section class="datenschutz">
+  <div class="datenschutz-wrapper">
+
+    <div class="datenschutz-header">
+      <h1>{{ i18n.get('privacy.title') }}</h1>
+      <button class="back-button" (click)="goBack()" aria-label="Back">
+        <img src="assets/img/back.png" alt="Back" />
+      </button>
+    </div>
+
+    <p>{{ i18n.get('privacy.updatedDate') }}</p>
+    <p>{{ i18n.get('privacy.intro') }}</p>
+
+    <h2>{{ i18n.get('privacy.servicesTitle') }}</h2>
+    <ul>
+      <li *ngFor="let service of getList('privacy.services')">{{ service }}</li>
+    </ul>
+
+    <h2>{{ i18n.get('privacy.contactTitle') }}</h2>
+    <p>{{ i18n.get('privacy.contactText') }}</p>
+    <p [innerHTML]="i18n.get('privacy.contactPerson')"></p>
+    <strong>{{ i18n.get('privacy.contactResponsible') }}</strong>
+
+    <h2>{{ i18n.get('privacy.generalPrinciplesTitle') }}</h2>
+
+    <h3>{{ i18n.get('privacy.collectTitle') }}</h3>
+    <p>{{ i18n.get('privacy.collectIntro') }}</p>
+    <ul>
+      <li *ngFor="let item of getList('privacy.collectList')">{{ item }}</li>
+    </ul>
+
+    <h3>{{ i18n.get('privacy.processingConditionsTitle') }}</h3>
+    <p>{{ i18n.get('privacy.processingConditionsText') }}</p>
+    <ul>
+      <li>{{ i18n.get('privacy.processingCondition1') }}</li>
+      <li>{{ i18n.get('privacy.processingCondition2') }}</li>
+      <li>{{ i18n.get('privacy.processingCondition3') }}</li>
+    </ul>
+
+    <h3>{{ i18n.get('privacy.revocationTitle') }}</h3>
+    <p>{{ i18n.get('privacy.revocationText') }}</p>
+
+    <h3>{{ i18n.get('privacy.disclosureTitle') }}</h3>
+    <h4>{{ i18n.get('privacy.disclosurePrinciple') }}</h4>
+    <p>{{ i18n.get('privacy.disclosurePrincipleText') }}</p>
+    <ul>
+      <li *ngFor="let item of getList('privacy.disclosurePrincipleList')">{{ item }}</li>
+    </ul>
+    <p>{{ i18n.get('privacy.disclosureNote') }}</p>
+
+    <h4>{{ i18n.get('privacy.socialMediaTitle') }}</h4>
+    <p>{{ i18n.get('privacy.socialMediaText') }}</p>
+
+    <h4>{{ i18n.get('privacy.foreignTransferTitle') }}</h4>
+    <p [innerHTML]="i18n.get('privacy.foreignTransferText')"></p>
+
+    <h3>{{ i18n.get('privacy.storageTitle') }}</h3>
+    <p>{{ i18n.get('privacy.storageText') }}</p>
+
+    <h3>{{ i18n.get('privacy.securityTitle') }}</h3>
+    <p>{{ i18n.get('privacy.securityText') }}</p>
+
+    <h3>{{ i18n.get('privacy.rightsTitle') }}</h3>
+
+    <h4>{{ i18n.get('privacy.rightsAccessTitle') }}</h4>
+    <p [innerHTML]="i18n.get('privacy.rightsAccessText')"></p>
+    <ul>
+      <li>{{ i18n.get('privacy.rightsAccessCondition1') }}</li>
+      <li>{{ i18n.get('privacy.rightsAccessCondition2') }}</li>
+    </ul>
+    <p>{{ i18n.get('privacy.rightsAccessLimitations') }}</p>
+
+    <h4>{{ i18n.get('privacy.rightsCorrectionTitle') }}</h4>
+    <p>{{ i18n.get('privacy.rightsCorrectionText') }}</p>
+
+    <h4>{{ i18n.get('privacy.rightsLegalTitle') }}</h4>
+    <p [innerHTML]="i18n.get('privacy.rightsLegalText')"></p>
+
+    <h3>{{ i18n.get('privacy.changesTitle') }}</h3>
+    <p [innerHTML]="i18n.get('privacy.changesText')"></p>
+
+    <h2>{{ i18n.get('privacy.processingTitle') }}</h2>
+
+    <h3>{{ i18n.get('privacy.logsTitle') }}</h3>
+    <h4>{{ i18n.get('privacy.logsInfoTitle') }}</h4>
+    <p>{{ i18n.get('privacy.logsInfoText') }}</p>
+    <ul>
+      <li *ngFor="let item of getList('privacy.logsInfoList')">{{ item }}</li>
+    </ul>
+
+    <h4>{{ i18n.get('privacy.logsLegalTitle') }}</h4>
+    <p>{{ i18n.get('privacy.logsLegalText') }}</p>
+
+    <h4>{{ i18n.get('privacy.logsOptOutTitle') }}</h4>
+    <p>{{ i18n.get('privacy.logsOptOutText') }}</p>
+
+    <h3>{{ i18n.get('privacy.firebaseTitle') }}</h3>
+    <p>{{ i18n.get('privacy.firebaseText') }}</p>
+    <ul>
+      <li *ngFor="let item of getList('privacy.firebaseList')">{{ item }}</li>
+    </ul>
+
+    <h3>{{ i18n.get('privacy.brainboxTitle') }}</h3>
+    <p [innerHTML]="i18n.get('privacy.brainboxText')"></p>
+
+  </div>
+</section>
