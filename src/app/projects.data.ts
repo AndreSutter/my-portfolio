@@ -18,6 +18,7 @@ export const PROJECTS: Project[] = [
     image: 'assets/img/Laptop.png',
     sticker: 'assets/img/Sticker.png',
     githubUrl: 'https://github.com/Getinger96/Join',
+    liveUrl: 'https://andre-sutter.ch/join/'
   },
   {
     slug: 'sharkie',
