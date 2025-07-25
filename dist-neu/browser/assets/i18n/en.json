@@ -1,0 +1,206 @@
+{
+  "nav.about": "About me",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+
+  "about.location": "Based in Zürich",
+  "about.relocation": "Open to relocate",
+  "about.remote": "Open to work remote",
+  "about.subheading": "WHO’S ANDRÉ?",
+  "about.headline": "About me",
+
+  "about.p1": "Hey there, I’m André. I’m a passionate frontend developer with a strong sense for clean code, intuitive design, and user-centered experiences. What excites me about coding is the unique balance between logic and creativity – solving real problems with elegant solutions that not only work but feel right.",
+  "about.p2": "Every new challenge is a chance to sharpen my skills, question old habits, and discover smarter ways to build. I truly enjoy the learning process – whether it’s debugging a tricky issue or exploring a new tool or approach.",
+  "about.p3": "I believe that great software is built through curiosity, consistency, and collaboration. Let’s bring our ideas together and create something remarkable.",
+
+  "about.talk": "Let’s talk",
+
+  "hero.hello": "Hello world",
+  "hero.name": "I’M ANDRÉ SUTTER",
+  "hero.title1": "Frontend",
+  "hero.title2": "DEVELOPER",
+  "hero.cta": "Get in Touch",
+  "hero.caption": "André :)",
+
+  "skills.subheading": "MY STACK",
+  "skills.headline": "Skill set",
+  "skills.description": "I build responsive, user-friendly interfaces with a strong focus on clean code and intuitive design. I enjoy solving real problems, working in agile teams, and continuously improving through hands-on experience and learning.",
+
+  "project.back": "Go Back",
+  "project.description": "Description",
+  "project.details": "Implementation Details",
+  "project.duration": "Duration",
+  "project.next": "Next Project",
+  "project.github": "GitHub",
+  "project.live": "Live Test",
+  
+  "project.join.description": "Join is a task management application inspired by the Kanban method. It allows users to create, categorize, and manage tasks using a drag-and-drop interface. With an intuitive layout, it simplifies task tracking and enhances team collaboration.",
+"project.join.implementation": "This project was developed using HTML, CSS, and JavaScript, with Firebase for authentication and data. I built dynamic task rendering, drag-and-drop features, and responsive design. It strengthened my skills in component-based structure and real-time data handling.",
+
+  "projects.subheading": "MY CRAFT",
+  "projects.headline": "Projects",
+  "projects.intro": "Explore a selection of my projects built with modern frontend tools. Each one reflects my focus on clean design, responsiveness, and efficient code.",
+  "projects.detailsBtn": "Project details",
+  "projects.join.desc": "Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, assign users and categorize tasks.",
+  "projects.sharkie.desc": "A classic side-scrolling jump’n’run game built with JavaScript and HTML5 Canvas. Use keyboard controls to collect coins, defeat enemies, and dive through underwater levels.",
+  "projects.pokedex.desc": "Build your own digital Pokédex. Project uses API data to fetch and display detailed Pokémon stats, abilities, and visuals in an engaging and interactive way.",
+
+  "testimonials.titlePart1": "Colleagues'",
+  "testimonials.titlePart2": "Thoughts",
+
+  "testimonials.card1.text": "I worked with André on our Join project. He was a helpful and genuinely kind teammate. You could always ask him for support, and his input was highly valued in the group. Working with André was not only enjoyable but also a real asset to the team.",
+  "testimonials.card1.name": "Erich Gettinger",
+  "testimonials.card1.role": "Frontend Developer",
+
+  "testimonials.card2.text": "I had the opportunity to work with André on the JOIN project and got to know him as a highly reliable and supportive colleague. Even under pressure, he remained calm and kept the bigger picture in mind. His structured approach and team spirit made a great impact on our collaboration.",
+  "testimonials.card2.name": "Philipp Tesch",
+  "testimonials.card2.role": "Frontend Developer",
+
+  "contact.label": "Contact Me",
+  "contact.title": "Ready to work<br />together?",
+  "contact.description1": "I'm currently open to exciting opportunities as a frontend developer. I enjoy building modern web applications and collaborating in teams where I can contribute my skills and grow professionally.",
+  "contact.description2": "If you're looking for someone with a passion for clean UI, responsive design, and Angular development, let's talk.",
+  "contact.name": "What's your name?",
+  "contact.namePlaceholder": "Your name goes here",
+  "contact.email": "What's your email?",
+  "contact.emailPlaceholder": "youremail@email.com",
+  "contact.message": "How can I help you?",
+  "contact.messagePlaceholder": "Hello André, I am interested in...",
+  "contact.privacy": "I've read the",
+  "contact.privacyLink": "privacy policy",
+  "contact.send": "Send",
+  "contact.legal": "Legal Notice",
+
+  "project.sharkie.description": "A classic side-scrolling jump’n’run game built with JavaScript and HTML5 Canvas. Use keyboard controls to collect coins, defeat enemies, and dive through underwater levels.",
+"project.sharkie.implementation": "Created game logic using object-oriented JavaScript. Used HTML5 Canvas for rendering. Built animations, hitboxes, and level mechanics.",
+
+"project.pokedex.description": "Build your own digital Pokédex. Project uses API data to fetch and display detailed Pokémon stats, abilities, and visuals in an engaging and interactive way.",
+"project.pokedex.implementation": "Used REST API calls to dynamically load and render Pokémon data. Built dynamic search and filter components with responsive design.",
+
+  "legal.title": "Legal Notice",
+  "legal.responsible": "Responsible Entity",
+  "legal.name": "André Sutter",
+  "legal.address": "Baslerstrasse 29",
+  "legal.zip": "8048 Zurich",
+  "legal.country": "Switzerland",
+  "legal.email": "andre-sutter@hotmail.com",
+
+  "legal.disclaimerTitle": "Disclaimer",
+  "legal.disclaimer1": "The author assumes no liability for the correctness, accuracy, timeliness, reliability, or completeness of the information provided.",
+  "legal.disclaimer2": "Liability claims against the author for material or immaterial damages arising from access or use/non-use of the published information, misuse of the connection, or technical faults are excluded.",
+  "legal.disclaimer3": "All offers are non-binding. The author expressly reserves the right to change, supplement, delete parts of the pages or the entire offer without prior notice, or to cease publication temporarily or permanently.",
+
+  "legal.linkDisclaimerTitle": "Disclaimer for Links and Content",
+  "legal.linkDisclaimer": "References and links to third-party websites lie outside our area of responsibility. Any responsibility for such websites is rejected. Access and use of such websites are at the user’s own risk.",
+
+  "legal.copyrightTitle": "Copyright Declaration",
+  "legal.copyright": "The copyright and all other rights to content, images, photos, or other files on this website belong exclusively to Martin Jaros or the specifically named rights holders. For the reproduction of any elements, the written consent of the copyright holder must be obtained in advance.",
+
+  "privacy.title": "Privacy Policy",
+  "privacy.updatedDate": "Last updated: July 24, 2025",
+  "privacy.intro": "We place great importance on transparency in handling personal data. This privacy policy explains what personal data we collect, for what purpose, and who we may share it with. To ensure high transparency, this privacy policy is regularly reviewed and updated.",
+
+  "privacy.servicesTitle": "1. Which Services We Use",
+  "privacy.services": ["Firebase"],
+
+  "privacy.contactTitle": "2. Contact Information",
+  "privacy.contactText": "If you have questions or concerns about how we protect your data, feel free to contact us at any time via email. The responsible party for data processing through this website is:",
+  "privacy.contactPerson": "Andre Sutter<br>Baslerstrasse 29<br>8048 Zurich<br>Switzerland<br><br><strong>Data Protection Officer:</strong><br><br>",
+  "privacy.contactResponsible": "Responsible for Data Protection",
+
+  "privacy.generalPrinciplesTitle": "3. General Principles",
+  "privacy.collectTitle": "3.1 What Data Do We Collect and From Whom?",
+  "privacy.collectIntro": "Primarily, we process personal data that you provide to us or that we collect during operation of our website. Occasionally, we may also receive data from third parties. This can include the following categories:",
+  "privacy.collectList": [
+    "Personal details (name, address, date of birth, etc.)",
+    "Contact details (mobile number, email address, etc.)",
+    "Financial information (e.g., bank account data)",
+    "Online identifiers (e.g., cookie ID, IP addresses)",
+    "Location and traffic data",
+    "Audio and video recordings",
+    "Sensitive data (e.g., biometric data, health-related info)"
+  ],
+
+  "privacy.processingConditionsTitle": "3.2 Under What Conditions Do We Process Your Data?",
+  "privacy.processingConditionsText": "We treat your data confidentially and only for the purposes defined in this privacy policy. Transparency and proportionality are important to us. In exceptional cases where we cannot fully adhere to these principles, the data processing may still be lawful based on justification, including:",
+  "privacy.processingCondition1": "Your consent",
+  "privacy.processingCondition2": "Contract performance or pre-contractual measures",
+  "privacy.processingCondition3": "Our legitimate interest, provided it does not override your interests",
+
+  "privacy.revocationTitle": "3.3 How Can You Revoke Your Consent?",
+  "privacy.revocationText": "If you’ve given consent for specific processing, we only process your data within that scope unless another legal basis applies. You may revoke your consent at any time by emailing the address listed in the legal notice. Processing done prior to revocation remains unaffected.",
+
+  "privacy.disclosureTitle": "3.4 When May We Share Your Data?",
+  "privacy.disclosurePrinciple": "a. General Principle",
+  "privacy.disclosurePrincipleText": "We may rely on third parties or affiliated companies to process your data (called data processors). Categories of recipients may include:",
+  "privacy.disclosurePrincipleList": [
+    "Accounting and audit firms",
+    "Consulting firms (legal, tax, etc.)",
+    "IT providers (hosting, support, design, etc.)",
+    "Payment service providers",
+    "Tracking, conversion, and advertising services"
+  ],
+  "privacy.disclosureNote": "We ensure that these third parties meet privacy standards and handle your data confidentially. Authorities may also require access to personal data under certain conditions.",
+
+  "privacy.socialMediaTitle": "b. Visiting Our Social Media Channels",
+  "privacy.socialMediaText": "We may embed links to our social media channels on our website. These are easily identifiable via icons. Clicking them will take you to the respective platform, which may collect your data for its own purposes. We do not have knowledge of how these platforms use that data.",
+
+  "privacy.foreignTransferTitle": "c. International Transfers",
+  "privacy.foreignTransferText": "In some cases, data may be transferred to companies abroad, which are required to uphold equivalent privacy standards. Transfers may occur globally. If the destination country doesn’t meet Swiss privacy standards, we assess risks and contractually ensure protection using EU Standard Contractual Clauses or other legal mechanisms. See clauses here: <a href='https://commission.europa.eu/publications/standard-contractual-clauses-controllers-and-processors-eueea_de' target='_blank'>EU Standard Clauses</a>.",
+
+  "privacy.storageTitle": "3.5 How Long Do We Store Your Data?",
+  "privacy.storageText": "We store your data only as long as necessary to fulfill the original purpose. Website visit data is kept for 12 months, except for tracking data, which may be retained longer. Contract data is stored up to 10 years due to legal obligations. Once data is no longer needed for services, it is blocked and used only for accounting or tax purposes.",
+
+  "privacy.securityTitle": "3.6 How Do We Protect Your Data?",
+  "privacy.securityText": "We secure your data using appropriate measures against loss, misuse, or unauthorized access. Employees and contractors are bound to confidentiality. SSL encryption is used for secure transmission on our website.",
+
+  "privacy.rightsTitle": "3.7 Your Rights",
+  "privacy.rightsAccessTitle": "a. Right of Access",
+  "privacy.rightsAccessText": "You may request access to the personal data we store about you at any time by submitting a request with ID to andre-sutter@hotmail.com. You may also request a machine-readable copy of your data if:",
+  "privacy.rightsAccessCondition1": "You provided consent for the processing",
+  "privacy.rightsAccessCondition2": "The data is related to a contract with us",
+  "privacy.rightsAccessLimitations": "We may restrict or deny access if required by law or third-party interests. Processing your request can take up to 30 days; we may extend this if justified.",
+
+  "privacy.rightsCorrectionTitle": "b. Correction and Deletion",
+  "privacy.rightsCorrectionText": "You may request correction or deletion of your data at any time, unless legal or contractual obligations prevent it. Exercising these rights may affect contract execution.",
+
+  "privacy.rightsLegalTitle": "c. Legal Action",
+  "privacy.rightsLegalText": "If you believe your rights are violated, you may take legal action or file a complaint with the Swiss Federal Data Protection and Information Commissioner: <a href='https://www.edoeb.admin.ch' target='_blank'>www.edoeb.admin.ch</a>",
+
+  "privacy.changesTitle": "3.8 Changes to This Privacy Policy",
+  "privacy.changesText": "We may update this privacy policy at any time. The latest version is always published on andre-sutter.ch. You will not be informed separately about changes.",
+
+  "privacy.processingTitle": "4. Specific Data Processing Activities",
+
+  "privacy.logsTitle": "4.1 Website and Logfiles",
+  "privacy.logsInfoTitle": "What Data Do We Collect and How Do We Use It?",
+  "privacy.logsInfoText": "When visiting andre-sutter.ch, the following data may be collected automatically for system security, statistics, or debugging purposes:",
+  "privacy.logsInfoList": [
+    "Your internet provider’s name",
+    "Your IP address (possibly)",
+    "Browser version",
+    "Operating system",
+    "Date and time of access",
+    "Referring site",
+    "Search terms used"
+  ],
+
+  "privacy.logsLegalTitle": "Why May We Process This Data?",
+  "privacy.logsLegalText": "This data cannot be linked to any specific individual and is not merged with other data. We process it to ensure functionality and IT security, which is our legitimate interest.",
+
+  "privacy.logsOptOutTitle": "How Can You Prevent Data Collection?",
+  "privacy.logsOptOutText": "The data is only stored as long as needed to fulfill the purpose and is deleted at the end of each session. As this logging is essential for site operation, you cannot object to it.",
+
+  "privacy.firebaseTitle": "4.2 Firebase",
+  "privacy.firebaseText": "We use Firebase by Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Firebase helps us develop and improve web and mobile applications by processing data such as your IP address, browser, timestamps, and interactions. Services used may include:",
+  "privacy.firebaseList": [
+    "Firebase Realtime Database: A cloud-hosted NoSQL database.",
+    "Firebase Analytics: Analytics tool for user behavior and usage.",
+    "Firebase Authentication: Authentication services for users.",
+    "Firebase Cloud Messaging: For notifications and messaging."
+  ],
+
+  "privacy.brainboxTitle": "BrainBox Generators",
+  "privacy.brainboxText": "BrainBox Generators is a service by <a style='color:inherit;' href='https://brainbox.swiss/' rel='nofollow' target='_blank'>BrainBox Solutions GmbH</a> to detect privacy-relevant services on a website and help create a compliant privacy policy. No personal data is processed."
+}
