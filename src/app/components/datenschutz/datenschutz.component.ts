@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { TranslationService } from '../../translation.service';
 
 @Component({
@@ -11,10 +11,10 @@ import { TranslationService } from '../../translation.service';
   styleUrls: ['./datenschutz.component.scss']
 })
 export class DatenschutzComponent {
-  constructor(private router: Router, public i18n: TranslationService) {}
+  constructor(private location: Location, public i18n: TranslationService) {}
 
   goBack(): void {
-    this.router.navigate(['/contact']);
+    this.location.back();
   }
 
   getList(key: string): string[] {

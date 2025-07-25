@@ -36,7 +36,7 @@
   "project.live": "Live Test",
   
   "project.join.description": "Join is a task management application inspired by the Kanban method. It allows users to create, categorize, and manage tasks using a drag-and-drop interface. With an intuitive layout, it simplifies task tracking and enhances team collaboration.",
-  "project.join.implementation": "This project was built using Angular and TypeScript, with Firebase providing authentication and database services. I implemented dynamic task rendering, drag-and-drop logic, user assignment, and responsive layout design. The project strengthened my skills in component-based architecture, state management, and working with real-time data in a collaborative environment.",
+"project.join.implementation": "This project was developed using HTML, CSS, and JavaScript, with Firebase for authentication and data. I built dynamic task rendering, drag-and-drop features, and responsive design. It strengthened my skills in component-based structure and real-time data handling.",
 
   "projects.subheading": "MY CRAFT",
   "projects.headline": "Projects",
