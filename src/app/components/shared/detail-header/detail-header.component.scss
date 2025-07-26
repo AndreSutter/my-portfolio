@@ -16,6 +16,11 @@
   background: transparent;
   z-index: 10;
   font-family: 'Bricolage Grotesque', sans-serif;
+  transition: top 0.3s ease-in-out;
+
+  &.hidden {
+    top: -100px;
+  }
 }
 
 .nav-container {
@@ -155,7 +160,7 @@
   }
 
   .nav-container {
-    display: flex; /* notwendig für justify-content */
+    display: flex;
     justify-content: space-between;
     padding: 0 16px;
 
@@ -197,7 +202,7 @@
       font-weight: 700;
       font-size: 1.5rem;
       color: #3d5afe;
-    text-decoration: none;
+      text-decoration: none;
     }
 
     .close-btn {

@@ -131,7 +131,14 @@
   width: 220.57px;
   height: 244px;
   transform: rotate(8deg);
+
+
+&:hover .portrait-inside{
+    filter: grayscale(0%);
+  }
 }
+  
+
 
 .polaroid-frame {
   width: 100%;
@@ -140,17 +147,6 @@
   position: relative;
 }
 
-.portrait-inside {
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 4px;
-  z-index: 1;
- transform: rotate(8deg);
-}
 
 .caption {
   position: absolute;
@@ -196,6 +192,20 @@
     }
   }
 }
+.portrait-inside {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  z-index: 1;
+  transform: rotate(8deg);
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
 
 @media (max-width: 1199px) {
   :host {

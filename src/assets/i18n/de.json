@@ -34,7 +34,7 @@
   "project.live": "Live-Test",
 
   "project.join.description": "Join ist eine Aufgabenverwaltungs-App, die sich an der Kanban-Methode orientiert. Nutzer können Aufgaben erstellen, kategorisieren und per Drag-and-Drop verwalten. Das intuitive Layout vereinfacht das Task-Tracking und fördert die Zusammenarbeit im Team.",
-  "project.join.implementation": "Dieses Projekt wurde mit Angular und TypeScript entwickelt, wobei Firebase für Authentifizierung und Datenbankdienste verwendet wurde. Ich habe die dynamische Aufgabendarstellung, die Drag-and-Drop-Logik, Benutzerzuweisungen und ein responsives Layout implementiert. Das Projekt hat meine Fähigkeiten in komponentenbasierter Architektur, State-Management und der Arbeit mit Echtzeitdaten in einer kollaborativen Umgebung gestärkt.",
+  "project.join.implementation": "Dieses Projekt wurde mit HTML, CSS und JavaScript entwickelt, wobei Firebase für Authentifizierung und Daten verwendet wurde. Ich habe dynamisches Rendern von Aufgaben, Drag-and-Drop-Funktionen und ein responsives Design umgesetzt. Das Projekt hat meine Fähigkeiten in komponentenbasierter Struktur und im Umgang mit Echtzeitdaten gestärkt.",
 
   "projects.subheading": "MEIN HANDWERK",
   "projects.headline": "Projekte",
@@ -93,7 +93,7 @@
   "legal.linkDisclaimer": "Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des jeweiligen Nutzers.",
 
   "legal.copyrightTitle": "Urheberrechtserklärung",
-  "legal.copyright": "Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website, gehören ausschliesslich Martin Jaros oder den speziell genannten Rechteinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Voraus einzuholen.",
+  "legal.copyright": "Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website, gehören ausschliesslich André Sutter oder den speziell genannten Rechteinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Voraus einzuholen.",
 
   "privacy.title": "Datenschutzerklärung",
   "privacy.updatedDate": "Zuletzt aktualisiert am: 24.07.2025",

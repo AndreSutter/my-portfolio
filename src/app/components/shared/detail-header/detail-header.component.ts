@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslationService } from '../../../translation.service';
@@ -10,9 +10,29 @@ import { TranslationService } from '../../../translation.service';
   templateUrl: './detail-header.component.html',
   styleUrls: ['./detail-header.component.scss']
 })
-export class DetailHeaderComponent {
+export class DetailHeaderComponent implements OnInit {
   isMenuOpen = false;
+  isHeaderHidden = false;
+  private lastScrollY = 0;
+
   constructor(public i18n: TranslationService) {}
+
+  ngOnInit() {
+    this.lastScrollY = window.scrollY;
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > this.lastScrollY && currentScroll > 80) {
+      this.isHeaderHidden = true;
+    } else {
+      this.isHeaderHidden = false;
+    }
+
+    this.lastScrollY = currentScroll;
+  }
 
   toggleLanguage(event: Event) {
     const c = event.target as HTMLInputElement;

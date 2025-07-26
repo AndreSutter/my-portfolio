@@ -4,7 +4,7 @@
   position: relative;
   min-height: 100vh;
   font-family: 'Bricolage Grotesque', sans-serif;
-  padding-top: 80px;
+  padding-top: 0px;
   overflow-x: hidden;
 
   &::before {
@@ -135,7 +135,7 @@
 
 .next-project {
   max-width: 1200px;
-  margin: 50px auto 20px;
+  margin: 20px auto 0px;
   padding: 0 80px;
   text-align: right;
 
@@ -155,6 +155,24 @@
     }
   }
 }
+
+@media (max-width: 1130px) {
+  .content-wrapper {
+    gap: 70px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .content-wrapper {
+    gap: 0px;
+    padding: 0 10px;
+  }
+
+    .right-column .mockup-wrapper img:first-child {
+    width: 400px;
+  }
+}
+
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
@@ -213,4 +231,21 @@
 }
 }
 
+@media (max-width: 370px){
+   .primary-btn {
+  font-size: 14px !important;
+   }
+  a {
+    font-size: 18px!important;
+}
 
+.project-detail {
+  padding-top: 0px;
+  overflow-x: hidden;
+}
+
+.section-heading {
+    margin: 8px 0 8px!important;
+  }
+
+}

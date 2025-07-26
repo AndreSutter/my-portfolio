@@ -182,11 +182,13 @@
     flex-direction: column-reverse;
     padding: 72px 36px;
     gap: 32px;
+    align-items:center;
 
     .about-left,
     .about-right {
       width: 100%;
-      align-items: flex-start;
+      align-items: center; 
+      text-align: center;
     }
 
     .about-left {
@@ -203,6 +205,7 @@
           font-size: 18px;
           gap: 8px;
         }
+        
 
         .icon {
           width: 28px;
@@ -210,26 +213,38 @@
         }
       }
     }
+      .about-right {
+      .subheading {
+       text-align:center;
+       align-self:center;
+       align-items:center;
+      }
+    }
+     .talk-btn {
+        align-self:center;
+      }
 
     .about-right {
       h2 {
         font-size: 56px;
+        align-self:center;
       }
 
       .underline {
         width: 260px;
+        align-self:center;
       }
     }
   }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
-    padding: 64px 2px;
-    gap: 48px;
+    padding: 30px 2px;
+    gap: 30px;
 
     .about-left,
     .about-right {
-      width: 343px;
+      width: 380px;
       align-items: flex-start;
     }
 
@@ -280,4 +295,10 @@
       }
     }
   }
+    @media (max-width: 400px) {
+    .about-left,
+    .about-right {
+      width: 320px;
+    }
+}
 }

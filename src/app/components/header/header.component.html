@@ -1,12 +1,42 @@
 <header class="header">
   <div class="nav-container">
-    <div class="logo">AS</div>
+    <div class="logo" (click)="goHome()">AS</div>
 
-    <a (click)="scrollTo('about')"    class="nav-link">{{ i18n.get('nav.about') }}</a>
-    <a (click)="scrollTo('skills')"   class="nav-link">{{ i18n.get('nav.skills') }}</a>
-    <a (click)="scrollTo('projects')" class="nav-link">{{ i18n.get('nav.projects') }}</a>
-    <a (click)="scrollTo('contact')"  class="nav-link">{{ i18n.get('nav.contact') }}</a>
 
+    <!-- Desktop‑Links: bleiben auf Home per scrollTo, gehen sonst via Router -->
+    <a
+      *ngIf="router.url === '/' ; else gotoAbout"
+      (click)="scrollTo('about')"
+      class="nav-link">{{ i18n.get('nav.about') }}</a>
+    <ng-template #gotoAbout>
+      <a [routerLink]="['/']" fragment="about" class="nav-link">{{ i18n.get('nav.about') }}</a>
+    </ng-template>
+
+    <a
+      *ngIf="router.url === '/' ; else gotoSkills"
+      (click)="scrollTo('skills')"
+      class="nav-link">{{ i18n.get('nav.skills') }}</a>
+    <ng-template #gotoSkills>
+      <a [routerLink]="['/']" fragment="skills" class="nav-link">{{ i18n.get('nav.skills') }}</a>
+    </ng-template>
+
+    <a
+      *ngIf="router.url === '/' ; else gotoProjects"
+      (click)="scrollTo('projects')"
+      class="nav-link">{{ i18n.get('nav.projects') }}</a>
+    <ng-template #gotoProjects>
+      <a [routerLink]="['/']" fragment="projects" class="nav-link">{{ i18n.get('nav.projects') }}</a>
+    </ng-template>
+
+    <a
+      *ngIf="router.url === '/' ; else gotoContact"
+      (click)="scrollTo('contact')"
+      class="nav-link">{{ i18n.get('nav.contact') }}</a>
+    <ng-template #gotoContact>
+      <a [routerLink]="['/']" fragment="contact" class="nav-link">{{ i18n.get('nav.contact') }}</a>
+    </ng-template>
+
+    <!-- Sprachumschalter -->
     <div class="lang-toggle">
       <input type="checkbox" id="lang" hidden (change)="toggleLanguage($event)" />
       <label for="lang" class="lang-en">EN</label>
@@ -17,14 +47,31 @@
     <button class="burger" (click)="isMenuOpen = !isMenuOpen">☰</button>
   </div>
 
+  <!-- Mobile‑Menü: immer Router‑Navigation, Menü schließt danach -->
   <nav class="mobile-menu" [ngClass]="{ open: isMenuOpen }">
     <div class="logo">AS</div>
     <button class="close-btn" (click)="isMenuOpen = false">✕</button>
 
-    <a (click)="scrollTo('about')"    class="nav-link">{{ i18n.get('nav.about') }}</a>
-    <a (click)="scrollTo('skills')"   class="nav-link">{{ i18n.get('nav.skills') }}</a>
-    <a (click)="scrollTo('projects')" class="nav-link">{{ i18n.get('nav.projects') }}</a>
-    <a (click)="scrollTo('contact')"  class="nav-link">{{ i18n.get('nav.contact') }}</a>
+    <a
+      [routerLink]="['/']"
+      fragment="about"
+      class="nav-link"
+      (click)="isMenuOpen = false">{{ i18n.get('nav.about') }}</a>
+    <a
+      [routerLink]="['/']"
+      fragment="skills"
+      class="nav-link"
+      (click)="isMenuOpen = false">{{ i18n.get('nav.skills') }}</a>
+    <a
+      [routerLink]="['/']"
+      fragment="projects"
+      class="nav-link"
+      (click)="isMenuOpen = false">{{ i18n.get('nav.projects') }}</a>
+    <a
+      [routerLink]="['/']"
+      fragment="contact"
+      class="nav-link"
+      (click)="isMenuOpen = false">{{ i18n.get('nav.contact') }}</a>
 
     <div class="lang-toggle">
       <input type="checkbox" id="lang-m" hidden (change)="toggleLanguage($event)" />

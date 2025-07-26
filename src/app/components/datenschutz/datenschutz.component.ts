@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Location } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
+import { HeaderComponent } from '../../components/header/header.component';
 import { TranslationService } from '../../translation.service';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-datenschutz',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    FooterComponent,
+  ],
   templateUrl: './datenschutz.component.html',
   styleUrls: ['./datenschutz.component.scss']
 })
 export class DatenschutzComponent {
-  constructor(private location: Location, public i18n: TranslationService) {}
+  constructor(public i18n: TranslationService, private location: Location) {}
 
   goBack(): void {
     this.location.back();

@@ -1,31 +1,36 @@
+:host {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  background-color: black;
+  background-size: 100% auto;
+  background-position: top center;
+  color: white;
+  overflow-x: hidden;
+
+  @media (min-width: 1440px) {
+    background-size: 1440px 900px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1439px) {
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
 .legal-notice {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  padding: 160px 0 40px;
-  color: #000;
+  padding: 80px 24px 40px;
   font-family: 'Bricolage Grotesque', sans-serif;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('../../assets/img/backgroundpaper.png') repeat-x top center;
-    background-size: auto 100%;
-    transform: rotate(180deg);
-    z-index: 0;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
-  }
+  z-index: 1;
 
   .legal-wrapper {
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
-    text-align: left;
+    padding: 0 16px;
+    box-sizing: border-box;
     line-height: 1.6;
   }
 
@@ -38,7 +43,7 @@
     h1 {
       font-size: 48px;
       font-weight: 700;
-      color: #fff;
+      color: white;
       margin: 0;
     }
 
@@ -53,7 +58,7 @@
         width: 32px;
         height: 32px;
         object-fit: contain;
-        filter: invert(1); // macht schwarzes Icon auf dunklem Hintergrund weiß
+        filter: invert(1);
       }
 
       &:hover {
@@ -80,9 +85,11 @@
     color: #87cefa;
     text-decoration: underline;
   }
+}
 
-  @media (max-width: 768px) {
-    padding: 120px 0 32px;
+@media (max-width: 1024px) {
+  .legal-notice {
+    padding: 100px 0px 32px;
 
     .legal-wrapper {
       padding: 0 16px;
@@ -94,21 +101,79 @@
       gap: 16px;
 
       h1 {
-        font-size: 36px;
+        font-size: 40px;
+      }
+
+      .back-button img {
+        width: 28px;
+        height: 28px;
       }
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  :host {
+    padding: 10px 0 32px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .legal-notice {
+    padding: 100px 0px 32px;
+
+    .legal-header {
+      h1 {
+        font-size: 32px;
+      }
+
+      .back-button img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    h2 {
+      font-size: 22px;
     }
 
     p {
       font-size: 16px;
     }
+  }
+}
 
-    .back-button img {
-      width: 28px;
-      height: 28px;
+@media (max-width: 400px) {
+  .legal-notice {
+    padding: 10px 0px 24px;
+
+    .legal-header {
+      h1 {
+        font-size: 26px;
+      }
+
+      .back-button img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      word-break: break-word;
     }
   }
 }

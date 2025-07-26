@@ -65,7 +65,7 @@
           </div>
         </label>
 
-      
+        <!-- Message -->
         <label>
           {{ i18n.get('contact.message') }}
           <input type="text" name="message" [(ngModel)]="contactData.message"
@@ -79,8 +79,8 @@
           </div>
         </label>
 
-      
-        <label class="checkbox">
+        <!-- Checkbox -->
+       <label class="checkbox" [class.mobile-hidden]="isMobile && showSuccessMessage">
           <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacyAccepted" required #privacy="ngModel" />
           <span class="checkbox-text">
             {{ i18n.get('contact.privacy') }}
@@ -91,10 +91,12 @@
           </div>
         </label>
 
+        <!-- Submit Button -->
         <button type="submit" [disabled]="!contactForm.valid" *ngIf="!showSuccessMessage">
           {{ i18n.get('contact.send') }}
         </button>
 
+        <!-- Success Message -->
         <div class="success-wrapper" *ngIf="showSuccessMessage">
           <div class="success-placeholder">
             <span class="success-icon">✔</span>
@@ -105,34 +107,5 @@
       </form>
     </div>
   </div>
-
-  <footer class="footer-row">
-    <div class="footer-left">
-      <p class="copyright">© André Sutter 2024</p>
-    </div>
-
-    <nav class="footer-links">
-      <div class="hover-button-wrapper">
-        <a href="/impressum" class="footer-link">{{ i18n.get('contact.legal') }}</a>
-      </div>
-      <div class="hover-button-wrapper github">
-        <a href="https://github.com/AndreSutter" target="_blank" class="footer-link">
-          <img src="assets/img/github.svg" alt="GitHub Icon" class="hover-icon" />
-          GitHub
-        </a>
-      </div>
-      <div class="hover-button-wrapper linkedin">
-        <a href="https://www.linkedin.com/in/andr%C3%A9-sutter-1760b7285" target="_blank" class="footer-link">
-          <img src="assets/img/linkedin.svg" alt="LinkedIn Icon" class="hover-icon" />
-          LinkedIn
-        </a>
-      </div>
-      <div class="hover-button-wrapper email">
-        <a href="mailto:andre-sutter@hotmail.com" class="footer-link">
-          <img src="assets/img/mailbox.svg" alt="Email Icon" class="hover-icon" />
-          Email
-        </a>
-      </div>
-    </nav>
-  </footer>
+  <app-footer></app-footer>
 </section>
