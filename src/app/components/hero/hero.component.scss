@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   height: 900px;
-  background-image: url('../../../assets/img/backgroundpaper.png');
+  background-image: url('../../../assets/img/backgroundpaper.webp');
   background-size: 100% auto;
   background-position: top center;
   color: white;
@@ -164,7 +164,8 @@
 .social-icons {
   position: absolute;
   top: 654px;
-  left: 64px;
+  left: 50%;
+  transform: translateX(calc(-50% + -648px));
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -204,6 +205,13 @@
   transform: rotate(8deg);
   filter: grayscale(100%);
   transition: filter 0.4s ease;
+}
+
+@media (max-width: 1440px) {
+  .social-icons {
+    left: 72px;
+    transform: none;
+  }
 }
 
 
@@ -294,7 +302,19 @@
     font-size: 14px;
   }
 
+   .social-icons {
+    position: absolute;
+    top: auto;
+    bottom: 85px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
   .social-icons {
     display: none;
   }
 }
+

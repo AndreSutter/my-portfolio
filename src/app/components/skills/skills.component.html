@@ -29,7 +29,14 @@
     </div>
 
     <div class="skills-sticker" (click)="toggleSticker()">
-      <img [src]="stickerSrc" alt="Sticker background" class="layer base" [class.rounded]="isYellow" />
+      <img 
+        [src]="stickerSrc" 
+        alt="Sticker background" 
+        class="layer base" 
+        [class.rounded]="isYellow"
+        [class.peel-sticker]="!isYellow"
+        [class.vue-sticker]="isYellow"
+      />
     </div>
   </div>
 </section>

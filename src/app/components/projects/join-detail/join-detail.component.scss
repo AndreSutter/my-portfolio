@@ -18,13 +18,13 @@
   display: grid;
   grid-template-columns: 1fr 560px;
   gap: 100px;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 80px auto 0;
-  padding: 0 80px;
+  padding: 0 40px 0 60px;
 }
 
 .left-column {
-  max-width: 560px;
+  max-width: 520px;
 
   .go-back {
     display: inline-flex;
@@ -134,6 +134,7 @@
 .next-project {
   max-width: 1200px;
   margin: 20px auto 0px;
+  margin-top:-100px;
   padding: 0 80px;
   text-align: right;
 

@@ -13,12 +13,14 @@ import { TranslationService } from '../../../translation.service';
 export class DetailHeaderComponent implements OnInit {
   isMenuOpen = false;
   isHeaderHidden = false;
+  currentLangIsGerman = false;
   private lastScrollY = 0;
 
   constructor(public i18n: TranslationService) {}
 
   ngOnInit() {
     this.lastScrollY = window.scrollY;
+    this.currentLangIsGerman = this.i18n.getCurrentLang() === 'de';
   }
 
   @HostListener('window:scroll', [])
@@ -37,6 +39,7 @@ export class DetailHeaderComponent implements OnInit {
   toggleLanguage(event: Event) {
     const c = event.target as HTMLInputElement;
     this.i18n.setLanguage(c.checked ? 'de' : 'en');
+    this.currentLangIsGerman = c.checked;
   }
 
   scrollTo(id: string) {

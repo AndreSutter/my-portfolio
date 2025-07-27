@@ -8,7 +8,7 @@
         <path id="badgePath" d="M100 100 m-80 0 a80 80 0 1 1 160 0 a80 80 0 1 1 -160 0" />
       </defs>
 
-      <image href="assets/img/rundorange.png" width="200" height="200" clip-path="url(#badgeClip)" />
+      <image href="assets/img/rundorange.webp" width="200" height="200" clip-path="url(#badgeClip)" />
 
       <text font-family="'Bricolage Grotesque', sans-serif" font-size="14" font-weight="700" letter-spacing="1"
         fill="#000">
@@ -40,8 +40,9 @@
         <label>
           {{ i18n.get('contact.name') }}
           <input type="text" name="name" [(ngModel)]="contactData.name"
-            [placeholder]="i18n.get('contact.namePlaceholder')" required pattern="^[A-Za-zÀ-ÿ]{2,} [A-Za-zÀ-ÿ]{2,}$"
-            #name="ngModel" />
+            [placeholder]="i18n.get('contact.namePlaceholder')" required
+            pattern="^\s*[A-Za-zÀ-ÿ]{2,}(?: [A-Za-zÀ-ÿ]{2,})+\s*$" #name="ngModel" />
+
 
           <div class="error-message" [class.visible]="name.errors?.['required'] && name.touched">
             Oops! it seems your name is missing
@@ -80,7 +81,7 @@
         </label>
 
         <!-- Checkbox -->
-       <label class="checkbox" [class.mobile-hidden]="isMobile && showSuccessMessage">
+        <label class="checkbox" [class.mobile-hidden]="isMobile && showSuccessMessage">
           <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacyAccepted" required #privacy="ngModel" />
           <span class="checkbox-text">
             {{ i18n.get('contact.privacy') }}

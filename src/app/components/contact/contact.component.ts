@@ -50,19 +50,23 @@ export class ContactComponent implements OnInit {
     this.isMobile = window.innerWidth <= 768;
   }
 
-  onSubmit(form: NgForm): void {
-    if (form.submitted && form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
-        .subscribe({
-          next: () => this.handleSuccess(form),
-          error: (err) => console.error('❌ Sending failed:', err),
-          complete: () => console.info('📤 Send post complete')
-        });
-    } else if (form.submitted && form.valid && this.mailTest) {
-      console.log('🧪 Test mode – no real send:', this.contactData);
-      this.handleSuccess(form, 7000);
-    }
+onSubmit(form: NgForm): void {
+  // 🧹 Name aufräumen
+  this.contactData.name = this.contactData.name.trim().replace(/\s+/g, ' ');
+
+  if (form.submitted && form.valid && !this.mailTest) {
+    this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+      .subscribe({
+        next: () => this.handleSuccess(form),
+        error: (err) => console.error('❌ Sending failed:', err),
+        complete: () => console.info('📤 Send post complete')
+      });
+  } else if (form.submitted && form.valid && this.mailTest) {
+    console.log('🧪 Test mode – no real send:', this.contactData);
+    this.handleSuccess(form, 7000);
   }
+}
+
 
   private handleSuccess(form: NgForm, timeout: number = 6000): void {
     this.showSuccessMessage = true;

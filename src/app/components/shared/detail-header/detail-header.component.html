@@ -8,7 +8,12 @@
     <a routerLink="/" fragment="contact" class="nav-link">{{ i18n.get('nav.contact') }}</a>
 
     <div class="lang-toggle">
-      <input type="checkbox" id="lang-switch" hidden (change)="toggleLanguage($event)" />
+      <input
+        type="checkbox"
+        id="lang-switch"
+        hidden
+        [checked]="currentLangIsGerman"
+        (change)="toggleLanguage($event)" />
       <label for="lang-switch" class="lang-en">EN</label>
       <label class="switch" for="lang-switch"><span class="slider"></span></label>
       <label for="lang-switch" class="lang-de">DE</label>
@@ -27,7 +32,12 @@
     <a routerLink="/" fragment="contact" class="nav-link" (click)="isMenuOpen = false">{{ i18n.get('nav.contact') }}</a>
 
     <div class="lang-toggle">
-      <input type="checkbox" id="lang-switch-mobile" hidden (change)="toggleLanguage($event)" />
+      <input
+        type="checkbox"
+        id="lang-switch-mobile"
+        hidden
+        [checked]="currentLangIsGerman"
+        (change)="toggleLanguage($event)" />
       <label for="lang-switch-mobile" class="lang-en">EN</label>
       <label class="switch" for="lang-switch-mobile"><span class="slider"></span></label>
       <label for="lang-switch-mobile" class="lang-de">DE</label>
