@@ -1,7 +1,7 @@
 .contact-section {
   position: relative;
   overflow: hidden;
-  min-height:auto;
+  min-height: auto;
   color: #000;
   font-family: 'Bricolage Grotesque', sans-serif;
   padding: 160px 0 40px;
@@ -134,7 +134,7 @@
         input[type='email'],
         textarea {
           padding: 12px;
-          padding-left:0px;
+          padding-left: 0px;
           border: none;
           border-bottom: 2px solid #f0c441;
           background: transparent;
@@ -157,9 +157,8 @@
         }
 
         .error-message {
-          min-height: 0px;
           font-size: 14px;
-          margin-top: 0px;
+          margin-top: 4px;
           visibility: hidden;
           color: #ff4d4f;
         }
@@ -170,23 +169,33 @@
 
         &.checkbox {
           flex-direction: row;
-          align-items: center;
+          align-items: flex-start;
+          gap: 8px;
           font-size: 15px;
+          flex-wrap: wrap;
 
           input[type='checkbox'] {
-            width: 16px;
-            height: 16px;
-            margin-right: 8px;
+            margin-top: 2px;
+            flex-shrink: 0;
           }
 
           .checkbox-text {
-            white-space: normal;
+            display: inline;
+            line-height: 1.4;
+            color: #fff;
 
             a {
-              cursor: pointer;
               color: #87cefa;
               text-decoration: underline;
+              white-space: nowrap;
             }
+          }
+
+          .error-message {
+            width: 100%;
+            font-size: 13px;
+            margin-top: 4px;
+            color: #ff4d4f;
           }
         }
       }
@@ -314,9 +323,10 @@
   }
 
   @media (max-width: 768px) {
-  .mobile-hidden {
-    display: none !important;
-  }
+    .mobile-hidden {
+      display: none !important;
+    }
+
     .orange-badge {
       top: 110px;
       right: 24px;
@@ -411,4 +421,15 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.1) inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
 }

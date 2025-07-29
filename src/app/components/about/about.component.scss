@@ -87,11 +87,14 @@
       margin: 0;
     }
 
-    .underline {
+    .animated-underline {
       align-self: flex-start;
-      margin: 0 0 24px;
       width: 303px;
       height: auto;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw-line-loop 12s ease-out infinite;
+      margin-bottom: 24px;
     }
 
     .description {
@@ -127,6 +130,21 @@
     }
   }
 
+  @keyframes draw-line-loop {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    16.6% {
+      stroke-dashoffset: 0;
+    }
+    83.3% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 1000;
+    }
+  }
+
   @media (max-width: 1380px) {
     padding: 96px 60px;
     gap: 48px;
@@ -156,6 +174,10 @@
         font-size: 18px;
         margin-bottom: 0;
       }
+
+      .animated-underline {
+        width: 260px;
+      }
     }
   }
 
@@ -184,12 +206,12 @@
     flex-direction: column-reverse;
     padding: 72px 36px;
     gap: 32px;
-    align-items:center;
+    align-items: center;
 
     .about-left,
     .about-right {
       width: 100%;
-      align-items: center; 
+      align-items: center;
       text-align: center;
     }
 
@@ -207,7 +229,6 @@
           font-size: 18px;
           gap: 8px;
         }
-        
 
         .icon {
           width: 28px;
@@ -215,26 +236,26 @@
         }
       }
     }
-      .about-right {
-      .subheading {
-       text-align:center;
-       align-self:center;
-       align-items:center;
-      }
-    }
-     .talk-btn {
-        align-self:center;
-      }
 
     .about-right {
-      h2 {
-        font-size: 56px;
-        align-self:center;
+      .subheading {
+        text-align: center;
+        align-self: center;
+        align-items: center;
       }
 
-      .underline {
+      h2 {
+        font-size: 56px;
+        align-self: center;
+      }
+
+      .animated-underline {
         width: 260px;
-        align-self:center;
+        align-self: center;
+      }
+
+      .talk-btn {
+        align-self: center;
       }
     }
   }
@@ -281,7 +302,7 @@
         font-size: 48px;
       }
 
-      .underline {
+      .animated-underline {
         width: 227px;
         margin-bottom: 16px;
       }
@@ -297,10 +318,11 @@
       }
     }
   }
-    @media (max-width: 400px) {
+
+  @media (max-width: 400px) {
     .about-left,
     .about-right {
       width: 320px;
     }
-}
+  }
 }

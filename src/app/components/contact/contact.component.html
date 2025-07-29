@@ -10,15 +10,14 @@
 
       <image href="assets/img/rundorange.webp" width="200" height="200" clip-path="url(#badgeClip)" />
 
-      <text font-family="'Bricolage Grotesque', sans-serif" font-size="14" font-weight="700" letter-spacing="1"
-        fill="#000">
+      <text font-family="'Bricolage Grotesque', sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#000">
         <textPath href="#badgePath" startOffset="0%">
           André Sutter – Frontend Developer • André Sutter – Frontend Developer •
         </textPath>
       </text>
 
-      <text x="100" y="118" text-anchor="middle" font-family="'Bricolage Grotesque', sans-serif" font-size="64"
-        font-weight="700" fill="#000">
+      <text x="100" y="118" text-anchor="middle" font-family="'Bricolage Grotesque', sans-serif"
+        font-size="64" font-weight="700" fill="#000">
         AS
       </text>
     </svg>
@@ -35,15 +34,12 @@
 
     <div class="contact-right">
       <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-
         <!-- Name -->
         <label>
           {{ i18n.get('contact.name') }}
           <input type="text" name="name" [(ngModel)]="contactData.name"
             [placeholder]="i18n.get('contact.namePlaceholder')" required
             pattern="^\s*[A-Za-zÀ-ÿ]{2,}(?: [A-Za-zÀ-ÿ]{2,})+\s*$" #name="ngModel" />
-
-
           <div class="error-message" [class.visible]="name.errors?.['required'] && name.touched">
             Oops! it seems your name is missing
           </div>
@@ -104,9 +100,9 @@
             <span>Danke! Deine Nachricht wurde erfolgreich versendet. Ich melde mich so bald wie möglich bei dir.</span>
           </div>
         </div>
-
       </form>
     </div>
   </div>
+
   <app-footer></app-footer>
 </section>

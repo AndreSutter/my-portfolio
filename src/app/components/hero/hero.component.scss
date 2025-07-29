@@ -102,7 +102,7 @@
 .cta-btn {
   position: absolute;
   left: 700px;
-  padding: 12px 24px;
+  padding: 12px 32px;
   font-size: 18px;
   font-weight: 500;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -115,6 +115,10 @@
   transition: all 0.3s ease;
   transform: translateY(0);
   text-decoration: none;
+  white-space: nowrap;
+  width: auto;
+  max-width: unset;
+  text-align: center;
 
   &:hover {
     background: #ff6b00;
@@ -123,6 +127,7 @@
     transform: translateY(2px);
   }
 }
+
 
 .polaroid-wrapper {
   position: absolute;
