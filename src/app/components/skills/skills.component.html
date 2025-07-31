@@ -1,13 +1,27 @@
-<section class="skills-section">
+<section 
+  class="skills-section"
+ [ngClass]="i18n.getCurrentLang() === 'de' ? 'lang-de' : 'lang-en'"
+
+>
   <div class="skills-layout">
+  
+    <!-- Überschrift -->
     <div class="skills-heading">
       <p class="subheading">{{ i18n.get('skills.subheading') }}</p>
       <div class="headline-wrapper">
         <h2 class="headline">{{ i18n.get('skills.headline') }}</h2>
-        <img src="assets/img/orangecircle.png" alt="Circle" class="circle-overlay" />
+        <img 
+          #circle 
+          src="assets/img/orangecircle.png" 
+          alt="Circle" 
+          class="circle-overlay"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        />
       </div>
     </div>
 
+    <!-- Beschreibung + Icon-Grid -->
     <div class="skills-content">
       <div class="paper-description">
         <img src="assets/img/skillspanel.webp" alt="Panel" class="panel-bg" />
@@ -28,7 +42,8 @@
       </div>
     </div>
 
-    <div class="skills-sticker" (click)="toggleSticker()">
+    <!-- Desktop-Sticker -->
+    <div class="skills-sticker desktop-sticker" *ngIf="!isMobile" (click)="toggleSticker()">
       <img 
         [src]="stickerSrc" 
         alt="Sticker background" 
@@ -38,5 +53,17 @@
         [class.vue-sticker]="isYellow"
       />
     </div>
+
+    <!-- Mobile-Sticker -->
+    <div class="skills-sticker mobile-sticker" *ngIf="isMobile" (click)="toggleSticker()">
+      <div class="mobile-wrapper">
+        <img 
+          [src]="stickerSrc" 
+          alt="Sticker background"
+          class="mobile-image"
+        />
+      </div>
+    </div>
+
   </div>
 </section>

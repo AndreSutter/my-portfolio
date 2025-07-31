@@ -323,3 +323,21 @@
   }
 }
 
+@media (max-width: 400px) {
+     .hero-text {
+    h1,
+    h2 {
+      font-size: 52px;
+      letter-spacing: -5px;
+      margin: 0;
+    }
+
+    h1 {
+      margin-left: 0;
+    }
+  }
+}
+
+
+
+

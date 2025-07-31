@@ -16,6 +16,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 24px;
+    position: relative;
   }
 
   .skills-heading {
@@ -123,57 +124,47 @@
     }
   }
 
-.skills-sticker {
-  padding-right: 64px;
-  position: relative;
-  width: 200px;
-  height: 200px;
+  .skills-sticker {
+    padding-right: 64px;
+    position: relative;
+    width: 200px;
+    height: 200px;
 
-  .layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    pointer-events: none;
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
 
-    &.base.rounded {
-      border-radius: 24px;
+      &.base.rounded {
+        border-radius: 24px;
+      }
+
+      &.peel-sticker {
+        transform: rotate(8deg);
+      }
+
+      &.vue-sticker {
+        transform: rotate(8deg);
+      }
     }
+  }
 
-    &.peel-sticker {
-      transform: rotate(8deg);
-    }
-
-    &.vue-sticker {
-      transform: rotate(8deg);
-    }
+  .text {
+    z-index: 3;
+    width: 55%;
+    height: auto;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-
-    .arrow {
-      z-index: 2;
-      width: 27%;
-      height: auto;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .text {
-      z-index: 3;
-      width: 55%;
-      height: auto;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-
-@media(max-width:1500px) {
+// Responsive
+@media (max-width: 1500px) {
   .paper-description {
     .panel-bg {
       width: 100% !important;
@@ -272,13 +263,14 @@
       width: 160px;
       height: 160px;
       padding-right: 0;
-      transform: rotate(-8deg);
+      transform: rotate(8deg);
       align-self: center;
       position: relative;
+      margin-top: 40px;
 
       .layer {
         position: absolute;
-        top: 0;
+        top: 50;
         left: 0;
         width: 100%;
         height: 100%;
@@ -288,15 +280,6 @@
         &.base.rounded {
           border-radius: 24px;
         }
-      }
-
-      .arrow {
-        z-index: 2;
-        width: 30%;
-        height: auto;
-        top: 28%;
-        left: 50%;
-        transform: translate(-50%, -50%);
       }
 
       .text {
@@ -311,7 +294,7 @@
   }
 }
 
-@media(max-width:470px) {
+@media (max-width: 470px) {
   .paper-description {
     .panel-bg {
       width: 100% !important;
@@ -324,11 +307,83 @@
   }
 }
 
-@media(max-width:380px) {
+@media (max-width: 380px) {
   .paper-description {
     .panel-bg {
       width: 100% !important;
-      height: 220px !important;
+      height: 240px !important;
     }
+
+    .description-text {
+      top: 34px !important;
+    }
+  }
+}
+
+// Desktop Sticker
+.skills-sticker.desktop-sticker {
+  width: 200px;
+  height: 200px;
+  padding-right: 64px;
+  position: relative;
+
+  .layer.base {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    border-radius: 24px;
+  }
+
+  &.rounded .layer.base {
+    border-radius: 24px;
+  }
+
+  .peel-sticker {
+    transform: rotate(8deg);
+  }
+
+  .vue-sticker {
+    transform: rotate(8deg);
+  }
+}
+
+// Mobile Sticker (frei positioniert unten rechts)
+.skills-sticker.mobile-sticker {
+  position: absolute;
+  bottom: 100px;
+  left: 46px;
+  width: 120px;
+  height: 120px;
+  transform: rotate(8deg);
+  z-index: 5;
+
+  .mobile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .lang-de .circle-overlay {
+    width: 380px !important;
+    height: 100px !important;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+@media (max-width: 1399px) {
+  .lang-de .circle-overlay {
+    width: 260px !important;
+    height: 70px !important;
+    transform: translate(-50%, -50%) scale(1.05);
   }
 }

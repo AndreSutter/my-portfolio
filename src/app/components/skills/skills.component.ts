@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../translation.service';
 
@@ -12,6 +12,7 @@ import { TranslationService } from '../../translation.service';
 export class SkillsComponent {
   isYellow = false;
   stickerSrc = 'assets/img/pulltopeel.png';
+  isMobile = window.innerWidth <= 1399;
 
   constructor(public i18n: TranslationService) {}
 
@@ -20,5 +21,10 @@ export class SkillsComponent {
     this.stickerSrc = this.isYellow
       ? 'assets/img/gelbsticker.png'
       : 'assets/img/pulltopeel.png';
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.isMobile = window.innerWidth <= 1399;
   }
 }
